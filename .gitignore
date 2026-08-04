@@ -1,0 +1,52 @@
+# =====================================================
+# Python
+# =====================================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+
+.venv/
+venv/
+env/
+
+# VS Code
+
+.vscode/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Logs
+
+*.log
+
+# Windows
+
+Thumbs.db
+
+# macOS
+
+.DS_Store
+
+# Generated Data
+
+data/master_data/*.csv
+data/transactional_data/*.csv
+
+# Keep folder structure
+
+!data/master_data/.gitkeep
+!data/transactional_data/.gitkeep
+
+# Databricks
+
+*.dbc
+
+# Power BI temporary
+
+*.tmp
