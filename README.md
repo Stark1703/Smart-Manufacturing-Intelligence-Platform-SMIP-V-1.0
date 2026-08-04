@@ -1,0 +1,1 @@
+# Smart-Manufacturing-Intelligence-Platform-SMIP-V.10
