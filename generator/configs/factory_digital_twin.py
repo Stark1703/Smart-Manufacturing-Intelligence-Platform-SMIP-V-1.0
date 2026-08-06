@@ -35,7 +35,7 @@ class ShiftType(Enum):
     MORNING = "Morning"
     EVENING = "Evening"
     NIGHT = "Night"
-    
+
     @property
     def release_time(self):
         from generator.configs.simulation_config import SHIFT_RELEASE_TIME

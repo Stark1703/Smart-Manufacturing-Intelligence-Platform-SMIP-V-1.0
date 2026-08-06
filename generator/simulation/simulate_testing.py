@@ -120,24 +120,37 @@ def simulate_testing(
                 program["maximum_value"]
             )
 
-            measured = random.uniform(
-                minimum,
-                maximum,
-            )
+            if random.random() < 0.98:
 
-            passed = (
-                minimum
-                <=
-                measured
-                <=
-                maximum
-            )
+                measured = random.uniform(
+                   minimum,
+                   maximum,
+                )
+
+            else:
+
+                 # Generate an out-of-spec measurement
+                 if random.random() < 0.5:
+
+                    measured = minimum - random.uniform(
+                         0.5,
+                         3.0,
+                    )
+
+                 else:
+
+                     measured = maximum + random.uniform(
+                          0.5,
+                          3.0,
+                     )
+
+            passed = minimum <= measured <= maximum
 
             result = (
-                QualityResult.PASS.value
-                if passed
-                else QualityResult.FAIL.value
-            )
+                 QualityResult.PASS.value
+                 if passed
+                 else QualityResult.FAIL.value
+             )
 
             duration = int(
                 program["standard_duration_sec"]
