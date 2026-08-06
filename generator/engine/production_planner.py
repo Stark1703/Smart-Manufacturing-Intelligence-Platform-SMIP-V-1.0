@@ -95,7 +95,6 @@ class ProductionPlanner:
     # ============================================================
     # Daily Planning
     # ============================================================
-
     def _generate_day(self) -> list[WorkOrder]:
         """
         Generate one production day.
@@ -108,21 +107,39 @@ class ProductionPlanner:
             MAX_WORK_ORDERS_PER_DAY,
         )
 
-        release_time = datetime.combine(
-            self.current_date,
-            ShiftType.MORNING.release_time,
-        )
+        shift_offsets = {
+            ShiftType.MORNING: 0,
+            ShiftType.EVENING: 8 * 60,
+            ShiftType.NIGHT: 16 * 60,
+        }
 
-        for index in range(order_count):
+        shift_counters = {
+            ShiftType.MORNING: 0,
+            ShiftType.EVENING: 0,
+            ShiftType.NIGHT: 0,
+        }
+
+        for _ in range(order_count):
+
+            shift = self._select_shift()
+
+            release_time = datetime.combine(
+                self.current_date,
+                ShiftType.MORNING.release_time,
+            )
 
             planned_start = (
-                release_time +
-                timedelta(minutes=index * 20)
+                release_time
+                + timedelta(minutes=shift_offsets[shift])
+                + timedelta(minutes=shift_counters[shift] * 20)
             )
+
+            shift_counters[shift] += 1
 
             daily_orders.append(
                 self._create_work_order(
-                    planned_start
+                    planned_start=planned_start,
+                    shift=shift,
                 )
             )
 
@@ -135,6 +152,7 @@ class ProductionPlanner:
     def _create_work_order(
         self,
         planned_start: datetime,
+        shift: ShiftType,
     ) -> WorkOrder:
         """
         Create one WorkOrder object.
@@ -174,7 +192,7 @@ class ProductionPlanner:
 
             priority=self._select_priority(),
 
-            planned_shift=ShiftType.MORNING,
+            planned_shift=shift,
 
             planned_start=planned_start,
 
@@ -265,6 +283,25 @@ class ProductionPlanner:
         return self.random.choices(
             population=priorities,
             weights=weights,
+            k=1,
+        )[0]
+
+    # ============================================================
+    # Shift Selection
+    # ============================================================
+
+    def _select_shift(self) -> ShiftType:
+        """
+        Select production shift using weighted probabilities.
+        """
+
+        return self.random.choices(
+            population=[
+                ShiftType.MORNING,
+                ShiftType.EVENING,
+                ShiftType.NIGHT,
+            ],
+            weights=[40, 35, 25],
             k=1,
         )[0]
 
