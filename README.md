@@ -2,7 +2,7 @@
 
 ![SMIP architecture overview](images/SMIP_Architecutre%20.png)
 
-![SMIP analytics report](docs/analytics/Report.png)
+![alt text](PowerBI_Report.png)
 > **An end-to-end Manufacturing Intelligence Platform that simulates a modern high-voltage electrical equipment factory using Python, Databricks Lakehouse, Delta Lake, Unity Catalog, SQL, and Power BI.**
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
