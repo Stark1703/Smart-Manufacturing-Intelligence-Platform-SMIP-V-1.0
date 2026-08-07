@@ -1,382 +1,269 @@
 # 🏭 Smart Manufacturing Intelligence Platform (SMIP)
 
-> **A complete end-to-end Smart Manufacturing Digital Twin and Manufacturing Execution System (MES) simulation platform built with Python.**
+> **An end-to-end Manufacturing Intelligence Platform that simulates a modern high-voltage electrical equipment factory using Python, Databricks Lakehouse, Delta Lake, Unity Catalog, SQL, and Power BI.**
 
-![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Active%20Development-orange.svg)
-![Platform](https://img.shields.io/badge/Platform-Databricks-red.svg)
-
----
-
-
-# 📑 Table of Contents
-
-- [Overview](#overview)
-- [project Highlights](#-project-highlights)
-- [Architecture](#architecture)
-- [Key Features](#key-features)
-  - [Factory Digital Twin](#factory-digital-twin)
-  - [Manufacturing Simulation](#manufacturing-simulation)
-  - [Analytics](#analytics)
-- [Repository Structure](#repository-structure)
-- [Generated Datasets](#generated-datasets)
-  - [Master Data](#master-data)
-  - [Transactional Data](#transactional-data)
-- [Quick Start](#quick-start)
-- [Documentation](#documentation)
-- [Roadmap](#roadmap)
-  - [Completed](#completed)
-  - [In Progress](#in-progress)
-  - [Planned](#planned)
-- [Technologies](#technologies)
-- [Screenshots](#screenshots)
-- [Project Statistics](#project-statistics)
-- [Future Work](#future-work)
-- [Author](#author)
-- [License](#license)
-
-
-## Overview
-
-The **Smart Manufacturing Intelligence Platform (SMIP)** is a modular simulation platform that models the operation of a modern manufacturing facility producing high-voltage electrical equipment.
-
-The project generates realistic synthetic manufacturing data covering the complete production lifecycle, from ERP work orders through manufacturing execution, quality inspection, packaging, and product traceability.
-
-The generated datasets are intended for:
-
-- 🏭 Manufacturing Analytics
-- 🤖 Factory Digital Twin
-- 📡 Industrial IoT (IIoT)
-- 📊 Power BI Dashboards
-- ☁️ Databricks Lakehouse
-- 🧠 Machine Learning
-- 📈 Manufacturing KPI Analysis
-- 🔍 End-to-End Product Traceability
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Databricks](https://img.shields.io/badge/Databricks-Lakehouse-red)
+![Delta Lake](https://img.shields.io/badge/Delta-Lake-orange)
+![Unity Catalog](https://img.shields.io/badge/Unity-Catalog-purple)
+![Power BI](https://img.shields.io/badge/Power-BI-F2C811?logo=powerbi&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🌟 Project Highlights
+## 📖 Overview
 
-- 🏭 End-to-end Smart Manufacturing Digital Twin
-- ⚙️ 10+ master data generators
-- 📦 9 transactional manufacturing simulations
-- 📈 3.6 million synthetic IoT force curve data points
-- 🔗 Complete product genealogy and traceability
-- ☁️ Designed for Databricks Lakehouse architecture
-- 📊 Analytics-ready datasets for SQL and Power BI
-- 🐍 Built with modern Python and a modular architecture
+The **Smart Manufacturing Intelligence Platform (SMIP)** is an end-to-end manufacturing analytics platform that simulates the complete production lifecycle of high-voltage electrical equipment.
 
----
+The platform generates realistic manufacturing data, processes it through a **Databricks Lakehouse** using the **Medallion Architecture (Bronze → Silver → Gold)**, and delivers business-ready insights through interactive **Power BI dashboards**.
 
-## Architecture
+### Manufacturing Data Flow
 
-> **System Architecture Diagram**
-
-```
-docs/images/architecture/system_architecture.svg
+```text
+Manufacturing Simulation
+        │
+        ▼
+Synthetic Manufacturing Data
+        │
+        ▼
+Databricks Lakehouse
+(Bronze → Silver → Gold)
+        │
+        ▼
+SQL Business Views
+        │
+        ▼
+Power BI Dashboards
 ```
 
-*(Replace this placeholder with the exported SVG once the diagram is created.)*
-
 ---
 
-## Key Features
+## ✨ Key Features
 
-### Factory Digital Twin
+### 🏭 Manufacturing Simulation
 
-- Factory hierarchy
-- Production halls
-- Production lines
-- Stations
-- Machines
-- Operators
-- Products
-- Tools
-
-### Manufacturing Simulation
-
-- SAP Work Orders
+- Factory Digital Twin
+- SAP Production Work Orders
 - Production Executions
-- Operator Login
-- Material Scans
-- Serial Numbers
-- Press Operations
+- Press Fitting Operations
 - Force Curve Simulation
 - Quality Testing
-- Packaging
+- Material Traceability
+- Packaging Simulation
 
-### Analytics
+### ☁️ Data Engineering
 
-- Manufacturing KPIs
-- SQL Analytics
 - Databricks Lakehouse
-- Power BI
-- Product Traceability
+- Medallion Architecture
+- Delta Lake
+- Unity Catalog
+- Databricks Workflows
+- SQL Business Views
+
+### 📊 Business Intelligence
+
+- Executive Dashboard
+- Production Dashboard
+- Quality Dashboard
+- Press Fitting Operations Dashboard
+- Product Traceability Dashboard
 
 ---
 
-## Repository Structure
+## 🏗 System Architecture
+
+> Architecture diagram
+
+```text
+/images/architecture.png
+```
+
+*(Architecture diagram will be added here.)*
+
+---
+
+## 📊 Power BI Dashboards
+
+SMIP includes five business-oriented dashboards.
+
+| Dashboard | Purpose |
+|-----------|---------|
+| Executive Dashboard | Executive KPIs and manufacturing overview |
+| Production Dashboard | Production monitoring and throughput |
+| Quality Dashboard | Quality performance and pass/fail analysis |
+| Press Fitting Dashboard | OEE, force analysis and cycle time monitoring |
+| Traceability Dashboard | Complete product genealogy and manufacturing history |
+
+Screenshots are available in the **powerbi/screenshots** directory.
+
+---
+
+## 🛠 Technology Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python 3.13 |
+| Data Processing | Pandas, NumPy |
+| Data Platform | Databricks, Delta Lake, Unity Catalog |
+| Analytics | SQL |
+| Business Intelligence | Power BI |
+| Version Control | Git, GitHub |
+
+---
+
+## 📂 Repository Structure
 
 ```text
 Smart-Manufacturing-Intelligence-Platform-SMIP/
 │
 ├── generator/
-├── data/
-├── datasets/
-├── notebooks/
+├── framework/
+├── databricks/
+├── powerbi/
 ├── sql/
 ├── docs/
-├── dashboard/
+├── data/
 └── tests/
 ```
 
-See the complete structure in:
+A detailed repository structure is available in:
 
-**📄 `docs/development/project_structure.md`**
+```text
+docs/architecture/project_structure.md
+```
 
 ---
 
-## Generated Datasets
+## 🚀 Quick Start
 
-### Master Data
-
-- Production Halls
-- Production Lines
-- Stations
-- Machines
-- Operators
-- Products
-- Tools
-- Operations
-- Press Programs
-- Test Programs
-
-### Transactional Data
-
-- Work Orders
-- Production Executions
-- Operator Login Sessions
-- Material Scans
-- Serial Numbers
-- Press Operations
-- Force Curve Points
-- Test Results
-- Packaging Records
-
----
-
-## Quick Start
-
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/Smart-Manufacturing-Intelligence-Platform-SMIP.git
+git clone https://github.com/Stark1703/Smart-Manufacturing-Intelligence-Platform-SMIP-V-1.0.git
 
-cd Smart-Manufacturing-Intelligence-Platform-SMIP
+cd Smart-Manufacturing-Intelligence-Platform-SMIP-V-1.0
 ```
 
-Create a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-Install dependencies:
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Generate the complete manufacturing dataset:
+### 3. Generate Manufacturing Data
 
-```bash
-python -m generator.master_data.generate_machine_layout
+Run the SMIP generator notebook:
 
-python -m generator.master_data.generate_product_master
-
-python -m generator.master_data.generate_tool_master
-
-...
-
-python -m generator.simulation.simulate_packaging
+```text
+databricks/notebooks/05_generator/01_run_smip
 ```
 
-Detailed instructions are available in:
+### 4. Execute the Databricks Workflow
 
-**📄 `docs/user_guide/execution_order.md`**
+```text
+SMIP Production Pipeline
+```
+
+The workflow automatically executes:
+
+- Manufacturing Data Generation
+- Bronze Layer
+- Silver Layer
+- Gold Layer
+
+### 5. Open the Power BI Report
+
+```text
+powerbi/reports/SMIP_v1.0.pbix
+```
 
 ---
 
-## Documentation
+## 📚 Documentation
 
-Complete technical documentation is available in the `docs` directory.
+Comprehensive documentation is available in the **docs** directory.
 
 | Section | Description |
 |----------|-------------|
-| Architecture | System design and workflows |
+| Architecture | System architecture and workflows |
 | Data Model | Master and transactional datasets |
+| Analytics | KPIs and dashboards |
 | User Guide | Installation and execution |
-| Analytics | KPIs, SQL, dashboards |
-| Development | Repository structure and roadmap |
-
-👉 **See:** `docs/README.md`
+| Development | Project roadmap and guidelines |
 
 ---
 
-## Roadmap
+## 📈 Project Statistics
 
-### Completed
+### Master Data
 
+- 12 Products
+- 2 Production Halls
+- 6 Production Lines
+- 54 Stations
+- 54 Machines
+- 72 Operators
+- 54 Tools
+- 48 Press Programs
+- 36 Test Programs
+
+### Transactional Data
+
+- 640 Work Orders
+- 640 Production Executions
+- 1,803 Serial Numbers
+- 7,212 Press Operations
+- 3.6 Million Force Curve Points
+- 5,409 Test Results
+- 1,803 Packaging Records
+
+---
+
+## 🗺 Roadmap
+
+### ✅ SMIP v1.0
+
+- Manufacturing Data Simulator
 - Factory Digital Twin
-- Master Data Generation
-- Manufacturing Simulation
-- Production Planning
-- Force Curve Simulation
-- Manufacturing Testing
-- Packaging Simulation
-
-### In Progress
-
-- Databricks Bronze Layer
-- Silver Transformations
-- Gold KPI Tables
-- SQL Analytics
-
-### Planned
-
-- Delta Lake Integration
-- Real-Time Streaming
+- Databricks Lakehouse
+- Delta Lake
+- Unity Catalog
+- Databricks Workflows
+- SQL Business Views
 - Power BI Dashboards
+
+### 🚀 SMIP v2.0
+
+- Industrial IoT Streaming
+- Real-Time Manufacturing Analytics
 - Predictive Maintenance
-- Machine Learning Models
-- Docker Support
-- CI/CD
+- Machine Health Monitoring
+- Digital Twin Enhancements
 
 ---
 
-## Technologies
-
-- Python 3.13
-- Pandas
-- NumPy
-- SQL
-- Databricks (planned)
-- Power BI (planned)
-
----
-
-
-
-# 📸 Screenshots
-
-The following screenshots will be added as the project evolves.
-
-| Screenshot | Description |
-|------------|-------------|
-| Factory Digital Twin | Factory hierarchy |
-| Manufacturing Workflow | Production process |
-| Databricks Lakehouse | Bronze → Silver → Gold |
-| Power BI Dashboard | Manufacturing KPIs |
-| Force Curve | IoT press-fit visualization |
-
-> Screenshots and architecture diagrams are available in `docs/images/`.
-
----
-
-# 📈 Project Statistics
-
-### Generated Master Data
-
-| Dataset | Records |
-|----------|---------:|
-| Production Halls | 2 |
-| Production Lines | 6 |
-| Stations | 54 |
-| Machines | 54 |
-| Operators | 72 |
-| Products | 12 |
-| Tools | 54 |
-| Press Programs | 48 |
-| Test Programs | 36 |
-
----
-
-### Generated Transactional Data
-
-| Dataset | Records |
-|----------|---------:|
-| Work Orders | 640 |
-| Production Executions | 640 |
-| Operator Login Sessions | 640 |
-| Material Scans | 1,803 |
-| Serial Numbers | 1,803 |
-| Press Operations | 7,212 |
-| Force Curve Points | **3,606,000** |
-| Test Results | 5,409 |
-| Packaging Records | 1,803 |
-
----
-
-
-# 🚀 Future Work
-
-The Smart Manufacturing Intelligence Platform will continue to evolve with additional capabilities.
-
-### Data Platform
-
-- Delta Lake integration
-- Databricks Unity Catalog
-- Incremental ETL pipelines
-- Streaming data ingestion
-
-### Manufacturing
-
-- Predictive Maintenance
-- Machine Downtime Simulation
-- Energy Consumption Simulation
-- Production Scheduling Optimization
-
-### Analytics
-
-- Power BI Executive Dashboard
-- Manufacturing KPI Dashboard
-- Quality Dashboard
-- Traceability Dashboard
-
-### Engineering
-
-- REST API
-- Docker Support
-- GitHub Actions CI/CD
-- Automated Testing
-- Performance Benchmarking
-
----
-
-
-## Author
+## 👨‍💻 Author
 
 **Sumanth Vempalle**
 
 Mechanical Engineer | Sustainable Industrial Engineering
 
-Specializations:
+**Specializations**
 
 - Manufacturing Systems
 - Industrial Digitalization
 - Data Engineering
 - Python
 - SQL
-- Power BI
 - Databricks
+- Power BI
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-⭐ If you found this project useful, consider giving it a star on GitHub.
+⭐ If you found this project interesting, consider giving it a **Star** on GitHub.
