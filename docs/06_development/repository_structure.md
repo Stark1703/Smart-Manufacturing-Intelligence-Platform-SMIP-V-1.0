@@ -1,127 +1,45 @@
-# 📁 Project Structure
+# Repository Structure
 
 ## Overview
 
-The Smart Manufacturing Intelligence Platform (SMIP) is organized into modular components to separate configuration, business logic, simulation, analytics, and documentation.
+SMIP follows a modular repository structure designed for maintainability and scalability.
 
-```
-Smart-Manufacturing-Intelligence-Platform-SMIP/
+## Top-Level Structure
+
+```text
+Smart-Manufacturing-Intelligence-Platform-SMIP-V-1.0/
 │
-├── dashboard/
 ├── data/
-├── datasets/
+├── databricks/
 ├── docs/
+├── framework/
 ├── generator/
-├── notebooks/
+├── powerbi/
 ├── sql/
-├── tests/
-├── requirements.txt
-└── README.md
+└── tests/
 ```
 
----
+## Folder Descriptions
 
-# Repository Layout
+| Folder | Purpose |
+|----------|---------|
+| generator | Manufacturing simulator |
+| framework | Shared utilities |
+| databricks | Lakehouse notebooks |
+| powerbi | Reports and themes |
+| sql | SQL scripts and views |
+| docs | Technical documentation |
+| tests | Test resources |
+| data | Generated datasets |
 
-## dashboard/
+## Design Principles
 
-Contains dashboard assets, screenshots, and Power BI resources.
-
----
-
-## data/
-
-Stores all generated datasets.
-
-```
-data/
-├── master_data/
-└── transactional_data/
-```
-
----
-
-## datasets/
-
-Reserved for Databricks Lakehouse storage.
-
-```
-datasets/
-├── raw/
-├── bronze/
-├── silver/
-└── gold/
-```
-
----
-
-## docs/
-
-Project documentation.
-
-- Architecture
-- Data Model
-- User Guide
-- Analytics
-- Development
-
----
-
-## generator/
-
-Core simulation engine.
-
-```
-generator/
-├── configs/
-├── engine/
-├── master_data/
-└── simulation/
-```
-
-### configs/
-
-Configuration files and Digital Twin definitions.
-
-### engine/
-
-Production planning and scheduling logic.
-
-### master_data/
-
-Generates manufacturing master data.
-
-### simulation/
-
-Generates transactional manufacturing events.
-
----
-
-## notebooks/
-
-Databricks notebooks implementing Bronze, Silver, and Gold transformations.
-
----
-
-## sql/
-
-SQL scripts for analytics, views, and KPI calculations.
-
----
-
-## tests/
-
-Reserved for unit and integration tests.
-
----
-
-# Design Principles
-
-The repository follows:
-
+- Separation of concerns
 - Modular architecture
-- Clear separation of concerns
-- Reusable simulation modules
-- Strong typing with Python dataclasses
-- Configuration-driven development
-- Extensible folder structure
+- Layered processing
+- Reusable components
+
+## Related Documentation
+
+- Coding Guidelines
+- Project Overview
