@@ -1,8 +1,10 @@
 # 🏭 Smart Manufacturing Intelligence Platform (SMIP)
 
-docs\07_images\SMIP_Architecutre .png
+<img width="1511" height="523" alt="image" src="https://github.com/user-attachments/assets/abba2e9c-2d82-414e-a872-c4a49cecba4e" />
 
-docs\07_images\PowerBI_Report.png
+<img width="1280" height="692" alt="image" src="https://github.com/user-attachments/assets/ae06e16b-579d-4aa3-927c-145b1bd1398e" />
+
+
 
 > **An end-to-end Manufacturing Intelligence Platform that simulates a modern high-voltage electrical equipment factory using Python, Databricks Lakehouse, Delta Lake, Unity Catalog, SQL, and Power BI.**
 
