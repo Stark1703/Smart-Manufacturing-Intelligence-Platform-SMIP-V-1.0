@@ -1,9 +1,10 @@
 """
 bronze_writer.py
 
-Bronze Layer Writer for the Smart Manufacturing Intelligence Platform (SMIP).
+Bronze Writer for the Smart Manufacturing Intelligence Platform (SMIP).
 
-Responsible for persisting Bronze Events.
+Responsible for converting Manufacturing Events into Bronze Events
+and delegating persistence to the Bronze Storage layer.
 
 Author:
 Sumanth Vempalle
@@ -14,44 +15,25 @@ Version:
 
 from __future__ import annotations
 
-import json
 import logging
-from pathlib import Path
+from datetime import datetime, UTC
 
-from streaming.bronze.bronze_event import BronzeEvent
+from streaming.events.manufacturing_event import ManufacturingEvent
+
+from .bronze_event import BronzeEvent
+from .bronze_storage import BronzeStorage
 
 logger = logging.getLogger(__name__)
 
 
 class BronzeWriter:
     """
-    Writes Bronze Events to the Bronze layer.
-
-    Currently stores events as JSON Lines (.jsonl).
-
-    Future versions will support:
-
-    - Delta Lake
-    - Apache Parquet
-    - Azure Data Lake
+    Converts Manufacturing Events into Bronze Events and stores them.
     """
 
-    def __init__(
-        self,
-        output_directory: str = "data/bronze",
-        file_name: str = "manufacturing_events.jsonl",
-    ) -> None:
+    def __init__(self) -> None:
 
-        self.output_directory = Path(output_directory)
-
-        self.output_directory.mkdir(
-            parents=True,
-            exist_ok=True,
-        )
-
-        self.output_file = (
-            self.output_directory / file_name
-        )
+        self.storage = BronzeStorage()
 
     # ============================================================
     # Write Event
@@ -59,41 +41,27 @@ class BronzeWriter:
 
     def write(
         self,
-        bronze_event: BronzeEvent,
-    ) -> None:
+        event: ManufacturingEvent,
+    ) -> BronzeEvent:
         """
-        Append one Bronze Event to the Bronze layer.
+        Convert a ManufacturingEvent into a BronzeEvent and persist it.
         """
 
-        with self.output_file.open(
-            "a",
-            encoding="utf-8",
-        ) as file:
+        bronze_event = BronzeEvent(
 
-            json.dump(
-                {
-                    "kafka_topic":
-                        bronze_event.kafka_topic,
+            ingestion_timestamp=datetime.now(UTC),
 
-                    "kafka_partition":
-                        bronze_event.kafka_partition,
+            source="kafka",
 
-                    "kafka_offset":
-                        bronze_event.kafka_offset,
+            manufacturing_event=event,
 
-                    "ingestion_timestamp":
-                        bronze_event.ingestion_timestamp.isoformat(),
-
-                    "event":
-                        bronze_event.event,
-                },
-                file,
-                default=str,
-            )
-
-            file.write("\n")
-
-        logger.debug(
-            "Bronze event written (offset=%d)",
-            bronze_event.kafka_offset,
         )
+
+        self.storage.write(bronze_event)
+
+        logger.info(
+            "Bronze Event stored: %s",
+            bronze_event.manufacturing_event.event_id,
+        )
+
+        return bronze_event
