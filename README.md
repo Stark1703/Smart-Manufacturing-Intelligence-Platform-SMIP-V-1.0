@@ -78,9 +78,9 @@ Power BI Dashboards
 
 ## 🏗 System Architecture
 
-![Manufacturing workflow](images/SMIP-Manufacturing%20work%20flow.png)
+[![Manufacturing workflow](images/SMIP-Manufacturing%20work%20flow.png)](https://github.com/Stark1703/Smart-Manufacturing-Intelligence-Platform-SMIP-V-1.0/blob/main/docs/07_images/SMIP-Manufacturing%20work%20flow.png?raw=true)
 
-![Databricks medallion architecture](images/SMIP_Databricks%20Medallion%20Architecture%20.png)
+https://github.com/Stark1703/Smart-Manufacturing-Intelligence-Platform-SMIP-V-1.0/blob/main/docs/07_images/SMIP_Databricks%20Medallion%20Architecture%20.png?raw=true
 
 ---
 
