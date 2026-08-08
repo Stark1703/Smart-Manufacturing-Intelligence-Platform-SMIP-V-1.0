@@ -47,7 +47,7 @@ class ManufacturingEvent:
         default_factory=lambda: datetime.now(timezone.utc)
     )
 
-    event_type: EventType = EventType.PRESS_OPERATION
+    event_type: EventType = EventType.OPERATION_COMPLETED
 
     event_version: str = "2.0"
 
