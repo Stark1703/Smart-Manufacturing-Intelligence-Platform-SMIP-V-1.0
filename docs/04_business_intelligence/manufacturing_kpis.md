@@ -6,6 +6,9 @@ SMIP calculates key manufacturing performance indicators (KPIs) from the Gold La
 
 These KPIs provide standardized metrics for monitoring production performance and operational excellence.
 
+<img width="1265" height="709" alt="image" src="https://github.com/user-attachments/assets/929dbf17-2820-4f5a-afa8-b80ab4a51bdc" />
+
+
 ---
 
 ## Production KPIs
