@@ -10,7 +10,8 @@ This separation improves scalability, maintainability, and extensibility.
 
 ## High-Level Architecture
 
-![System Architecture](../images/architecture/hero_architecture.png)
+<img width="1511" height="523" alt="image" src="https://github.com/user-attachments/assets/214382ee-7801-40dc-846c-6b1f326760a2" />
+
 
 ---
 
