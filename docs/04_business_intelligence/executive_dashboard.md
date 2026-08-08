@@ -6,6 +6,8 @@ The Executive Dashboard provides a high-level overview of manufacturing performa
 
 It is designed for plant managers and operations leadership who require quick visibility into key manufacturing KPIs.
 
+<img width="1268" height="698" alt="image" src="https://github.com/user-attachments/assets/6b1e45ec-e9ee-44b4-875f-6d3c1e037411" />
+
 ---
 
 ## Business Objective
