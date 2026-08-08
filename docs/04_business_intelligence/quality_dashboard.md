@@ -6,6 +6,8 @@ The Quality Dashboard monitors manufacturing quality performance and inspection 
 
 It provides visibility into product quality across manufacturing operations.
 
+<img width="1247" height="701" alt="image" src="https://github.com/user-attachments/assets/a2fe877d-be9d-4c8c-8fe9-0f4d45459034" />
+
 ---
 
 ## Business Objective
