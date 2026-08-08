@@ -41,7 +41,7 @@ class EventType(Enum):
     # Production Events
     # ============================================================
 
-    PRESS_OPERATION = "PRESS_OPERATION"
+    OPERATION_COMPLETED = "OPERATION_COMPLETED"
 
     # ============================================================
     # Quality Events

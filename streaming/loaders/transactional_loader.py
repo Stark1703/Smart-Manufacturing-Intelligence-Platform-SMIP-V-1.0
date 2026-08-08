@@ -19,7 +19,7 @@ import logging
 
 import pandas as pd
 
-from generator.configs.paths import (
+from streaming.configs.data_paths import (
     WORK_ORDERS_PATH,
     PRODUCTION_EXECUTIONS_PATH,
     SERIAL_NUMBERS_PATH,

@@ -7,7 +7,7 @@ This module provides helper functions for writing manufacturing
 events as JSON files for streaming ingestion.
 
 Author:
-Sumanth Vempalle + ChatGPT
+Sumanth Vempalle 
 
 Version:
 2.0.0
@@ -42,7 +42,7 @@ logger = logging.getLogger(__name__)
 # JSON Writer
 # ============================================================
 
-class JSONWriter:
+class JSONEventWriter:
     """
     Writes Manufacturing Events as JSON files.
 

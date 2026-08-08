@@ -68,14 +68,28 @@ class StreamingPipeline:
         logger.info("Initializing SMIP Streaming Pipeline")
         logger.info("=" * 60)
 
+        # --------------------------------------------------------
         # Master Data
+        # --------------------------------------------------------
+
+        logger.info("Loading Master Data...")
 
         self.master_loader = MasterDataLoader()
+
+        self.master_loader.load()          
+
         self.master_loader.summary()
 
-        # Transactional Data
+        # --------------------------------------------------------
+        # Load Transactional Data
+        # --------------------------------------------------------
+
+        logger.info("Loading Transactional Data...")
 
         self.transactional_loader = TransactionalLoader()
+
+        self.transactional_loader.load()
+
         self.transactional_loader.summary()
 
         # Enricher

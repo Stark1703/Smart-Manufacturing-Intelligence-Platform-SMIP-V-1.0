@@ -1,0 +1,29 @@
+{
+    "event_id": "EVT-318BF000E77F",
+    "event_timestamp": "2026-01-05T07:25:00",
+    "event_type": "WORK_ORDER_CREATED",
+    "event_version": "2.0",
+    "plant_code": "PLANT-001",
+    "hall_id": "",
+    "line_id": "",
+    "machine_id": "",
+    "execution_id": "",
+    "work_order_id": "WO-20260105-000003",
+    "serial_number": "",
+    "operator_id": "",
+    "product_code": "GIS-245-4000",
+    "source_system": "",
+    "correlation_id": "",
+    "payload": {
+        "sap_order_number": 5000000003,
+        "quantity": 3,
+        "priority": "Priority.LOW",
+        "planned_shift": "ShiftType.MORNING",
+        "routing_version": "RV-001",
+        "planner": "Production Planner",
+        "status": "WorkOrderStatus.RELEASED",
+        "product_name": "GIS Bay 245 kV / 4000 A",
+        "family": "ProductFamily.GIS_BAY",
+        "rated_voltage_kv": 245.0
+    }
+}
