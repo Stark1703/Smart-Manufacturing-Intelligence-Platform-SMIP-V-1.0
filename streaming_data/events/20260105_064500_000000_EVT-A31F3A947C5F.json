@@ -1,0 +1,28 @@
+{
+    "event_id": "EVT-A31F3A947C5F",
+    "event_timestamp": "2026-01-05T06:45:00",
+    "event_type": "QUALITY_COMPLETED",
+    "event_version": "2.0",
+    "plant_code": "PLANT-001",
+    "hall_id": "",
+    "line_id": "",
+    "machine_id": "",
+    "execution_id": "EXEC-000001",
+    "work_order_id": "",
+    "serial_number": "SN-00000002",
+    "operator_id": "",
+    "product_code": "GIS-072-2500",
+    "source_system": "",
+    "correlation_id": "",
+    "payload": {
+        "test_result_id": "TEST-00000004",
+        "test_program_id": "TP-0001",
+        "test_name": "Mechanical Endurance Test",
+        "target_value": 100.0,
+        "measured_value": 98.89,
+        "unit": "%",
+        "result": "PASS",
+        "product_name": "GIS Bay 72.5 kV / 2500 A",
+        "family": "ProductFamily.GIS_BAY"
+    }
+}

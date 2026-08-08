@@ -1,0 +1,28 @@
+{
+    "event_id": "EVT-524335069A3E",
+    "event_timestamp": "2026-01-05T07:03:00",
+    "event_type": "PACKAGING_COMPLETED",
+    "event_version": "2.0",
+    "plant_code": "PLANT-001",
+    "hall_id": "",
+    "line_id": "",
+    "machine_id": "",
+    "execution_id": "EXEC-000001",
+    "work_order_id": "",
+    "serial_number": "SN-00000002",
+    "operator_id": "",
+    "product_code": "GIS-072-2500",
+    "source_system": "",
+    "correlation_id": "",
+    "payload": {
+        "package_id": "PKG-00000002",
+        "package_type": "WOODEN_CRATE",
+        "package_weight_kg": 315.98,
+        "package_length_mm": 2009,
+        "package_width_mm": 1758,
+        "package_height_mm": 1678,
+        "packaging_status": "READY_FOR_SHIPMENT",
+        "product_name": "GIS Bay 72.5 kV / 2500 A",
+        "family": "ProductFamily.GIS_BAY"
+    }
+}

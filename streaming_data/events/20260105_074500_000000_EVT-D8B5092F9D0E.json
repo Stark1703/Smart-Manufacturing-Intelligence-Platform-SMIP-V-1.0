@@ -1,0 +1,24 @@
+{
+    "event_id": "EVT-D8B5092F9D0E",
+    "event_timestamp": "2026-01-05T07:45:00",
+    "event_type": "EXECUTION_STARTED",
+    "event_version": "2.0",
+    "plant_code": "PLANT-001",
+    "hall_id": "",
+    "line_id": "",
+    "machine_id": "",
+    "execution_id": "EXEC-000004",
+    "work_order_id": "WO-20260105-000004",
+    "serial_number": "",
+    "operator_id": "",
+    "product_code": "GIS-145-3150",
+    "source_system": "",
+    "correlation_id": "",
+    "payload": {
+        "sap_order_number": 5000000004,
+        "planned_shift": "ShiftType.MORNING",
+        "quantity": 2,
+        "status": "ExecutionStatus.PLANNED",
+        "production_line": null
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "event_id": "EVT-90C79162CEE8",
+    "event_timestamp": "2026-01-05T07:25:00",
+    "event_type": "QUALITY_COMPLETED",
+    "event_version": "2.0",
+    "plant_code": "PLANT-001",
+    "hall_id": "",
+    "line_id": "",
+    "machine_id": "",
+    "execution_id": "EXEC-000003",
+    "work_order_id": "",
+    "serial_number": "SN-00000011",
+    "operator_id": "",
+    "product_code": "GIS-245-4000",
+    "source_system": "",
+    "correlation_id": "",
+    "payload": {
+        "test_result_id": "TEST-00000031",
+        "test_program_id": "TP-0019",
+        "test_name": "Mechanical Endurance Test",
+        "target_value": 100.0,
+        "measured_value": 101.23,
+        "unit": "%",
+        "result": "PASS",
+        "product_name": "GIS Bay 245 kV / 4000 A",
+        "family": "ProductFamily.GIS_BAY"
+    }
+}

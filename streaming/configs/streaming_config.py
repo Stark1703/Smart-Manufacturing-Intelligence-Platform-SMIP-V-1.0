@@ -7,7 +7,7 @@ This module contains all configuration parameters used by the
 real-time manufacturing event simulator.
 
 Author:
-Sumanth Vempalle + ChatGPT
+Sumanth Vempalle
 
 Version:
 2.0.0
@@ -44,7 +44,7 @@ RANDOM_SEED = 42
 EVENTS_PER_BATCH = 5
 
 # Delay between batches (seconds)
-EVENT_INTERVAL_SECONDS = 1
+STREAM_DELAY_SECONDS = 1
 
 # Maximum number of events to generate
 MAX_EVENTS = 1000
@@ -69,7 +69,9 @@ DEFAULT_EVENT_TYPES = [
 
     "EXECUTION_STARTED",
 
-    "PRESS_OPERATION",
+    "SERIAL_NUMBER_ASSIGNED",
+
+    "OPERATION_COMPLETED",
 
     "QUALITY_COMPLETED",
 
