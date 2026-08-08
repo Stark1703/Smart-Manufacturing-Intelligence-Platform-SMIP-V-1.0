@@ -12,16 +12,6 @@ Completed:
 
 ---
 
-## Version 1.1
-
-Planned:
-
-- Machine Downtime Simulation
-- Energy Consumption
-- Additional KPIs
-- Enhanced Test Data
-
----
 
 ## Version 2.0
 
