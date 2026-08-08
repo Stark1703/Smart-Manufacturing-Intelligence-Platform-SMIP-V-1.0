@@ -19,14 +19,23 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any
 
-from streaming.events.event_types import EventType
+# from streaming.events.event_types import EventType
 
-print("=" * 60)
-print("Loaded from:", EventType.__module__)
-print("Members:", EventType.__members__)
-print("=" * 60)
+# print("=" * 60)
+# print("Loaded from:", EventType.__module__)
+# print("Members:", EventType.__members__)
+# print("=" * 60)
 from streaming.events.manufacturing_event import ManufacturingEvent
 
+import streaming.events.event_types as et
+
+print("=" * 80)
+print("Loaded from:", et.__file__)
+print("Members:", list(et.EventType))
+print("Has OPERATION_COMPLETED:", hasattr(et.EventType, "OPERATION_COMPLETED"))
+print("=" * 80)
+
+EventType = et.EventType
 
 class ManufacturingEventBuilder:
     """
