@@ -18,18 +18,25 @@ import logging
 import time
 from datetime import datetime
 
-from streaming.builders.manufacturing_event_builder import ManufacturingEventBuilder
+from streaming.builders.manufacturing_event_builder import (
+    ManufacturingEventBuilder,
+)
 from streaming.configs.streaming_config import (
     PLANT_CODE,
     STREAM_DELAY_SECONDS,
 )
-from streaming.enrichers.manufacturing_enricher import ManufacturingEnricher
+from streaming.enrichers.manufacturing_enricher import (
+    ManufacturingEnricher,
+)
+from streaming.kafka.producer import ManufacturingKafkaProducer
+from streaming.kafka.topics import MANUFACTURING_EVENTS_TOPIC
 from streaming.loaders.master_data_loader import MasterDataLoader
 from streaming.loaders.transactional_loader import TransactionalLoader
 from streaming.producers.manufacturing_event_producer import (
     ManufacturingEventProducer,
 )
 from streaming.utils.json_writer import JSONEventWriter
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -52,6 +59,9 @@ class StreamingPipeline:
         self.builder = None
         self.producer = None
         self.writer = None
+
+        # Kafka Producer
+        self.kafka_producer = None
 
         self.events_processed = 0
 
@@ -76,12 +86,12 @@ class StreamingPipeline:
 
         self.master_loader = MasterDataLoader()
 
-        self.master_loader.load()          
+        self.master_loader.load()
 
         self.master_loader.summary()
 
         # --------------------------------------------------------
-        # Load Transactional Data
+        # Transactional Data
         # --------------------------------------------------------
 
         logger.info("Loading Transactional Data...")
@@ -92,20 +102,27 @@ class StreamingPipeline:
 
         self.transactional_loader.summary()
 
+        # --------------------------------------------------------
         # Enricher
+        # --------------------------------------------------------
 
         self.enricher = ManufacturingEnricher(
             self.master_loader
         )
+
         self.enricher.summary()
 
+        # --------------------------------------------------------
         # Builder
+        # --------------------------------------------------------
 
         self.builder = ManufacturingEventBuilder(
             plant_code=PLANT_CODE,
         )
 
-        # Producer
+        # --------------------------------------------------------
+        # Event Producer
+        # --------------------------------------------------------
 
         self.producer = ManufacturingEventProducer(
             loader=self.transactional_loader,
@@ -113,9 +130,19 @@ class StreamingPipeline:
             builder=self.builder,
         )
 
-        # Writer
+        # --------------------------------------------------------
+        # JSON Writer
+        # --------------------------------------------------------
 
         self.writer = JSONEventWriter()
+
+        # --------------------------------------------------------
+        # Kafka Producer
+        # --------------------------------------------------------
+
+        self.kafka_producer = ManufacturingKafkaProducer()
+
+        logger.info("Kafka Producer initialized.")
 
         logger.info("Pipeline initialized successfully.")
 
@@ -135,7 +162,20 @@ class StreamingPipeline:
 
         for event in self.producer:
 
+            # --------------------------------------------
+            # Archive Event as JSON
+            # --------------------------------------------
+
             self.writer.write_event(event)
+
+            # --------------------------------------------
+            # Publish Event to Kafka
+            # --------------------------------------------
+
+            self.kafka_producer.send(
+                topic=MANUFACTURING_EVENTS_TOPIC,
+                event=event,
+            )
 
             self.events_processed += 1
 
@@ -145,9 +185,11 @@ class StreamingPipeline:
                 event.event_type.name,
             )
 
-            time.sleep(
-                STREAM_DELAY_SECONDS
-            )
+            time.sleep(STREAM_DELAY_SECONDS)
+
+        # Ensure all Kafka messages are delivered
+
+        self.kafka_producer.flush()
 
         self.end_time = datetime.now()
 
