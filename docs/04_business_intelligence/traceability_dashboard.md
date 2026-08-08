@@ -6,6 +6,8 @@ The Traceability Dashboard provides complete genealogy for every manufactured pr
 
 Users can trace products from work order creation through production, quality inspection, material usage, and packaging.
 
+<img width="1261" height="689" alt="image" src="https://github.com/user-attachments/assets/0dfd2ed4-2849-4e95-be4a-9db28bb94d20" />
+
 ---
 
 ## Business Objective
