@@ -8,7 +8,8 @@ SMIP uses the Databricks Medallion Architecture to progressively improve data qu
 
 ## Architecture
 
-![Medallion Architecture](../images/architecture/medallion_architecture.png)
+![Medallion Architecture] <img width="751" height="473" alt="image" src="https://github.com/user-attachments/assets/da567705-6f1e-4afd-9075-903f48fc40f8" />
+
 
 ---
 
