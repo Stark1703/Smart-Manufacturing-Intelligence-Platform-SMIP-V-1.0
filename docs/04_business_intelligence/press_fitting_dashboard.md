@@ -5,6 +5,7 @@
 The Press Fitting Dashboard analyzes machine performance during press fitting operations.
 
 It provides detailed visibility into production efficiency and Overall Equipment Effectiveness (OEE).
+<img width="1272" height="693" alt="image" src="https://github.com/user-attachments/assets/f1b36452-4c2a-461c-b5a8-e43e700bdcd9" />
 
 ---
 
