@@ -10,7 +10,8 @@ Each production stage generates manufacturing events that are transformed into a
 
 ## Manufacturing Process
 
-![Manufacturing Workflow](../images/architecture/manufacturing_workflow.png)
+<img width="759" height="481" alt="image" src="https://github.com/user-attachments/assets/7a7abb98-053e-4306-96b2-afd140dde488" />
+
 
 ---
 
