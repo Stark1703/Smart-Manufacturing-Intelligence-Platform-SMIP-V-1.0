@@ -20,9 +20,6 @@ from datetime import UTC, datetime
 
 @dataclass(slots=True)
 class BronzeEvent:
-    """
-    Raw event stored in the Bronze layer.
-    """
 
     kafka_topic: str
 
@@ -51,3 +48,13 @@ class BronzeEvent:
             ingestion_timestamp=datetime.now(UTC),
             event=event,
         )
+
+    def to_dict(self) -> dict:
+
+        return {
+            "kafka_topic": self.kafka_topic,
+            "kafka_partition": self.kafka_partition,
+            "kafka_offset": self.kafka_offset,
+            "ingestion_timestamp": self.ingestion_timestamp.isoformat(),
+            "event": self.event,
+        }
