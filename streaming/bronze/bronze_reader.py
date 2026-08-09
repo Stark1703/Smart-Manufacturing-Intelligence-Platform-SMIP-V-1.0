@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import json
 import logging
+from datetime import datetime
 from pathlib import Path
 from typing import Iterator
 
@@ -40,19 +41,18 @@ class BronzeReader:
 
     def __init__(
         self,
-        input_directory: str = "data/bronze",
-        filename: str = "manufacturing_events.jsonl",
+        path: str | Path = "data/bronze/manufacturing_events.jsonl",
     ) -> None:
 
-        self.file_path = Path(input_directory) / filename
+        self.file_path = Path(path)
 
     # ============================================================
     # Read Events
     # ============================================================
 
-    def read(self) -> Iterator[dict]:
+    def read_events(self) -> Iterator[BronzeEvent]:
         """
-        Yield Bronze Events one at a time.
+        Iterate over Bronze Events.
         """
 
         if not self.file_path.exists():
@@ -71,12 +71,53 @@ class BronzeReader:
 
             for line in file:
 
-                if line.strip():
+                line = line.strip()
 
-                    yield json.loads(line)
+                if not line:
+                    continue
+
+                data = json.loads(line)
+
+                yield BronzeEvent(
+
+                    kafka_topic=data["kafka_topic"],
+
+                    kafka_partition=data["kafka_partition"],
+
+                    kafka_offset=data["kafka_offset"],
+
+                    ingestion_timestamp=datetime.fromisoformat(
+                        data["ingestion_timestamp"]
+                    ),
+
+                    event=data["event"],
+
+                )
 
     # ============================================================
-    # Count Events
+    # Backwards Compatibility
+    # ============================================================
+
+    def read(self) -> Iterator[BronzeEvent]:
+        """
+        Alias kept for backwards compatibility.
+        """
+
+        return self.read_events()
+
+    # ============================================================
+    # Read All
+    # ============================================================
+
+    def read_all(self) -> list[BronzeEvent]:
+        """
+        Return all Bronze Events.
+        """
+
+        return list(self.read_events())
+
+    # ============================================================
+    # Count
     # ============================================================
 
     def count(self) -> int:
@@ -84,20 +125,7 @@ class BronzeReader:
         Return number of Bronze Events.
         """
 
-        if not self.file_path.exists():
-
-            return 0
-
-        with self.file_path.open(
-            "r",
-            encoding="utf-8",
-        ) as file:
-
-            return sum(
-                1
-                for line in file
-                if line.strip()
-            )
+        return sum(1 for _ in self.read_events())
 
     # ============================================================
     # Storage Path
@@ -106,7 +134,7 @@ class BronzeReader:
     @property
     def path(self) -> Path:
         """
-        Return Bronze storage path.
+        Bronze storage path.
         """
 
         return self.file_path

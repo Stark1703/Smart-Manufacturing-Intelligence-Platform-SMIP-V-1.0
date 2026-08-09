@@ -63,3 +63,37 @@ PACKAGING_PATH = TRANSACTIONAL_DATA / "packaging.csv"
 OPERATOR_LOGINS_PATH = TRANSACTIONAL_DATA / "operator_logins.csv"
 
 MATERIAL_SCANS_PATH = TRANSACTIONAL_DATA / "material_scans.csv"
+
+# ============================================================
+# Medallion Storage
+# ============================================================
+
+BRONZE_DATA = DATA_ROOT / "bronze"
+
+SILVER_DATA = DATA_ROOT / "silver"
+
+GOLD_DATA = DATA_ROOT / "gold"
+
+# ============================================================
+# Bronze Layer
+# ============================================================
+
+BRONZE_EVENTS_PATH = (
+    BRONZE_DATA / "manufacturing_events.jsonl"
+)
+
+# ============================================================
+# Silver Layer
+# ============================================================
+
+SILVER_EVENTS_PATH = (
+    SILVER_DATA / "manufacturing_events.jsonl"
+)
+
+# ============================================================
+# Gold Layer
+# ============================================================
+
+GOLD_EVENTS_PATH = (
+    GOLD_DATA / "manufacturing_events.parquet"
+)
