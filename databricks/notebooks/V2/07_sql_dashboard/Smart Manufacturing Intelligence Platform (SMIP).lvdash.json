@@ -1,0 +1,1029 @@
+{
+  "datasets": [
+    {
+      "name": "07abbdcd",
+      "displayName": "Factory Performance Insights",
+      "queryLines": [
+        "SELECT *\r\n",
+        "FROM smip_v2.manufacturing.factory_dashboard;"
+      ]
+    },
+    {
+      "name": "c19a44f8",
+      "displayName": "Manufacturing Product Performance Overview",
+      "queryLines": [
+        "SELECT\r\n",
+        "    product_name,\r\n",
+        "    products_started\r\n",
+        "FROM smip_v2.manufacturing.production_kpis\r\n",
+        "ORDER BY products_started DESC;"
+      ]
+    },
+    {
+      "name": "a912262d",
+      "displayName": "Shift Production Summary Report",
+      "queryLines": [
+        "SELECT\r\n",
+        "    planned_shift,\r\n",
+        "    SUM(products_started) AS products\r\n",
+        "FROM smip_v2.manufacturing.production_kpis\r\n",
+        "GROUP BY planned_shift;"
+      ]
+    },
+    {
+      "name": "05dda551",
+      "displayName": "Machine Operations Performance Overview",
+      "queryLines": [
+        "SELECT\r\n",
+        "    machine_name,\r\n",
+        "    operations_completed\r\n",
+        "FROM smip_v2.manufacturing.machine_kpis\r\n",
+        "where machine_name is not null\r\n",
+        "ORDER BY operations_completed DESC;"
+      ]
+    },
+    {
+      "name": "5024d024",
+      "displayName": "Manufacturing Machine Performance Insights",
+      "queryLines": [
+        "SELECT\r\n",
+        "    machine_name,\r\n",
+        "    average_cycle_time_sec\r\n",
+        "FROM smip_v2.manufacturing.machine_kpis;"
+      ]
+    },
+    {
+      "name": "2feba4ed",
+      "displayName": "Machine Performance Overview",
+      "queryLines": [
+        "SELECT\r\n",
+        "    machine_name,\r\n",
+        "    pass_rate\r\n",
+        "FROM smip_v2.manufacturing.machine_kpis;"
+      ]
+    },
+    {
+      "name": "2a612c08",
+      "displayName": "Quality Control Insights for Product Testing",
+      "queryLines": [
+        "SELECT\r\n",
+        "    product_name,\r\n",
+        "    tests_completed\r\n",
+        "FROM smip_v2.manufacturing.quality_kpis\r\n",
+        "ORDER BY tests_completed DESC;"
+      ]
+    },
+    {
+      "name": "25227e6b",
+      "displayName": "Quality Metrics Overview for Product Performance",
+      "queryLines": [
+        "SELECT\r\n",
+        "    product_name,\r\n",
+        "    pass_rate\r\n",
+        "FROM smip_v2.manufacturing.quality_kpis;"
+      ]
+    },
+    {
+      "name": "076a78f4",
+      "displayName": "Supplier Materials Scan Ranking Summary",
+      "queryLines": [
+        "SELECT\r\n",
+        "    supplier,\r\n",
+        "    materials_scanned\r\n",
+        "FROM smip_v2.manufacturing.material_kpis\r\n",
+        "ORDER BY materials_scanned DESC;"
+      ]
+    },
+    {
+      "name": "2c8579fa",
+      "displayName": "Supplier Performance Metrics Overview",
+      "queryLines": [
+        "SELECT\r\n",
+        "    supplier,\r\n",
+        "    scan_success_rate\r\n",
+        "FROM smip_v2.manufacturing.material_kpis;"
+      ]
+    },
+    {
+      "name": "be62db7a",
+      "displayName": "Top Packaging Performance Insights",
+      "queryLines": [
+        "SELECT\r\n",
+        "    product_name,\r\n",
+        "    packages_completed\r\n",
+        "FROM smip_v2.manufacturing.packaging_kpis\r\n",
+        "ORDER BY packages_completed DESC;"
+      ]
+    },
+    {
+      "name": "dbe22fc0",
+      "displayName": "Factory Shipment Readiness Performance Metrics",
+      "queryLines": [
+        "SELECT\r\n",
+        "    shipment_readiness_rate\r\n",
+        "FROM smip_v2.manufacturing.factory_dashboard;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "8bf17db5",
+      "displayName": "Executive Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "kpi-operations-completed",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "07abbdcd",
+                  "fields": [
+                    {
+                      "name": "sum(operations_completed)",
+                      "expression": "SUM(`operations_completed`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Operations Completed"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(operations_completed)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "test",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2a612c08",
+                  "fields": [
+                    {
+                      "name": "sum(tests_completed)",
+                      "expression": "SUM(`tests_completed`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Tests Completed"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(tests_completed)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "p1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c19a44f8",
+                  "fields": [
+                    {
+                      "name": "sum(products_started)",
+                      "expression": "SUM(`products_started`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Products Started "
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(products_started)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "mater",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "07abbdcd",
+                  "fields": [
+                    {
+                      "name": "sum(materials_scanned)",
+                      "expression": "SUM(`materials_scanned`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Material Scanned"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(materials_scanned)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "pac",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "07abbdcd",
+                  "fields": [
+                    {
+                      "name": "sum(packages_completed)",
+                      "expression": "SUM(`packages_completed`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Packages Completed"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(packages_completed)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "quality",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "07abbdcd",
+                  "fields": [
+                    {
+                      "name": "quality_pass_rate",
+                      "expression": "`quality_pass_rate`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Quality Pass Rate"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "quality_pass_rate",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "all"
+                    }
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 10,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "production-by-produc",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c19a44f8",
+                  "fields": [
+                    {
+                      "name": "sum(products_started)",
+                      "expression": "SUM(`products_started`)"
+                    },
+                    {
+                      "name": "product_name",
+                      "expression": "`product_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Production by Product"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(products_started)",
+                  "displayName": "Products Started",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "product_name",
+                  "displayName": "Product name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "poduction",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "05dda551",
+                  "fields": [
+                    {
+                      "name": "operations_completed",
+                      "expression": "`operations_completed`"
+                    },
+                    {
+                      "name": "machine_name",
+                      "expression": "`machine_name`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Operations by Machine"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "operations_completed",
+                  "displayName": "Opeations Completed",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "machine_name",
+                  "displayName": "Machine name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 3,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "average-cycle-time",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5024d024",
+                  "fields": [
+                    {
+                      "name": "average_cycle_time_sec",
+                      "expression": "`average_cycle_time_sec`"
+                    },
+                    {
+                      "name": "machine_name",
+                      "expression": "`machine_name`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Average Cycle Time"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "average_cycle_time_sec",
+                  "displayName": "Avg cycle time",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "machine_name",
+                  "displayName": "Machine name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 7,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "tes-1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2a612c08",
+                  "fields": [
+                    {
+                      "name": "sum(tests_completed)",
+                      "expression": "SUM(`tests_completed`)"
+                    },
+                    {
+                      "name": "product_name",
+                      "expression": "`product_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Tests by Product"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(tests_completed)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "product_name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 12,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "quality-pass-rate",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "25227e6b",
+                  "fields": [
+                    {
+                      "name": "pass_rate",
+                      "expression": "`pass_rate`"
+                    },
+                    {
+                      "name": "product_name",
+                      "expression": "`product_name`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Quality Pass Rate"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "pass_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "product_name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 7,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "materials-by-supplier",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "076a78f4",
+                  "fields": [
+                    {
+                      "name": "sum(materials_scanned)",
+                      "expression": "SUM(`materials_scanned`)"
+                    },
+                    {
+                      "name": "supplier",
+                      "expression": "`supplier`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Materials by Supplier"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(materials_scanned)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "supplier",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "material-scan-success",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2c8579fa",
+                  "fields": [
+                    {
+                      "name": "scan_success_rate",
+                      "expression": "`scan_success_rate`"
+                    },
+                    {
+                      "name": "supplier",
+                      "expression": "`supplier`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Material Scan Success"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "scan_success_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "supplier",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 12,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "packages-by-product",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "be62db7a",
+                  "fields": [
+                    {
+                      "name": "sum(packages_completed)",
+                      "expression": "SUM(`packages_completed`)"
+                    },
+                    {
+                      "name": "product_name",
+                      "expression": "`product_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Packages by Product"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(packages_completed)",
+                  "displayName": "Packages Completed",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "product_name",
+                  "displayName": "Product Name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 17,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "d7c1df23",
+            "queries": [
+              {
+                "name": "dashboards/01f1989f8cce1df88e807b9f316992db/datasets/01f1989f99c11f5381de0fd986d03d4f_product_name",
+                "query": {
+                  "datasetName": "c19a44f8",
+                  "fields": [
+                    {
+                      "name": "product_name",
+                      "expression": "`product_name`"
+                    },
+                    {
+                      "name": "product_name_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "product_name",
+                    "queryName": "dashboards/01f1989f8cce1df88e807b9f316992db/datasets/01f1989f99c11f5381de0fd986d03d4f_product_name"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "34ee4ea4",
+            "queries": [
+              {
+                "name": "dashboards/01f1989f8cce1df88e807b9f316992db/datasets/01f1989fc7a3113abb5140711f3b0d6e_supplier",
+                "query": {
+                  "datasetName": "2c8579fa",
+                  "fields": [
+                    {
+                      "name": "supplier",
+                      "expression": "`supplier`"
+                    },
+                    {
+                      "name": "supplier_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "supplier",
+                    "queryName": "dashboards/01f1989f8cce1df88e807b9f316992db/datasets/01f1989fc7a3113abb5140711f3b0d6e_supplier"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 0,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "6d084f8d",
+            "queries": [
+              {
+                "name": "dashboards/01f1989f8cce1df88e807b9f316992db/datasets/01f1989f9e621b4092cc6eec17de7952_planned_shift",
+                "query": {
+                  "datasetName": "a912262d",
+                  "fields": [
+                    {
+                      "name": "planned_shift",
+                      "expression": "`planned_shift`"
+                    },
+                    {
+                      "name": "planned_shift_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "planned_shift",
+                    "queryName": "dashboards/01f1989f8cce1df88e807b9f316992db/datasets/01f1989f9e621b4092cc6eec17de7952_planned_shift"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 0,
+            "width": 4,
+            "height": 1
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
