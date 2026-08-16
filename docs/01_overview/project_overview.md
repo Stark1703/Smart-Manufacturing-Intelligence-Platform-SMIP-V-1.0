@@ -1,96 +1,165 @@
 # Project Overview
 
-## Overview
+## Introduction
 
-The **Smart Manufacturing Intelligence Platform (SMIP)** is an end-to-end manufacturing analytics platform that simulates the production lifecycle of high-voltage electrical equipment. The platform combines synthetic manufacturing data generation, modern data engineering practices, and business intelligence to demonstrate how manufacturing data can be transformed into actionable insights.
+The **Smart Manufacturing Intelligence Platform (SMIP) V2** is an end-to-end manufacturing analytics platform that demonstrates how modern Data Engineering practices can be applied to industrial production environments using the **Databricks Lakehouse Platform**.
 
-SMIP models a realistic production environment by generating master and transactional manufacturing data, processing it through a Databricks Lakehouse using the Medallion Architecture, and exposing curated datasets for analytics through SQL and Power BI.
+The project processes manufacturing events generated throughout a production lifecycle and transforms them into structured business data through a scalable Medallion Architecture. The resulting datasets support manufacturing analytics, operational monitoring, and executive decision-making through interactive dashboards and Key Performance Indicators (KPIs).
 
----
-
-## Objectives
-
-SMIP was developed to demonstrate a complete manufacturing data platform capable of:
-
-- Simulating realistic manufacturing operations.
-- Implementing a modern Lakehouse architecture.
-- Demonstrating ETL best practices.
-- Providing business-ready analytical datasets.
-- Building interactive manufacturing dashboards.
-- Supporting future Industry 4.0 capabilities.
+SMIP V2 was designed as a practical implementation of a modern manufacturing data platform, combining cloud-native data engineering, dimensional modeling, and business intelligence into a single solution.
 
 ---
 
-## Platform Components
+# Vision
 
-The platform consists of five major components:
+Modern manufacturing facilities continuously generate large volumes of operational data from machines, production lines, quality inspections, material movements, and packaging operations.
 
-### Manufacturing Data Generation
+While this data contains valuable business insights, it is often distributed across multiple systems, stored in different formats, and difficult to analyze in real time.
 
-Synthetic manufacturing data is generated for:
+The vision of SMIP V2 is to demonstrate how these heterogeneous manufacturing events can be transformed into a centralized analytics platform capable of supporting production monitoring, performance measurement, and continuous improvement.
 
-- Master Data
-- Production Work Orders
-- Production Executions
-- Press Operations
-- Quality Testing
-- Material Traceability
+---
+
+# Project Goals
+
+The project was developed with the following objectives:
+
+- Build a cloud-native manufacturing analytics platform.
+- Implement a complete Medallion Architecture using Databricks.
+- Transform raw manufacturing events into analytics-ready datasets.
+- Design a Star Schema optimized for manufacturing reporting.
+- Calculate business-oriented manufacturing KPIs.
+- Develop an executive dashboard for operational monitoring.
+- Demonstrate modern Data Engineering practices using Delta Lake and Unity Catalog.
+
+---
+
+# Manufacturing Scenario
+
+The platform models the production lifecycle of **Gas-Insulated Switchgear (GIS)** equipment.
+
+Throughout the manufacturing process, events are generated for activities such as:
+
+- Production planning
+- Work order creation
+- Manufacturing execution
+- Machine operations
+- Quality inspections
+- Material traceability
 - Packaging
-- Force Curve Simulation
+- Product completion
+
+These events collectively describe the operational state of the factory and form the foundation of the analytics pipeline.
 
 ---
 
-### Data Engineering
+# Solution Overview
 
-The generated datasets are processed through a Databricks Lakehouse consisting of:
+SMIP V2 implements a complete Lakehouse solution composed of multiple logical layers.
 
-- Bronze Layer
-- Silver Layer
-- Gold Layer
+```
+Manufacturing Events
+        │
+        ▼
+Bronze Layer
+(Raw Events)
+        │
+        ▼
+Silver Layer
+(Cleansed & Standardized Data)
+        │
+        ▼
+Dimension Tables
+        │
+        ▼
+Fact Tables
+        │
+        ▼
+Gold KPI Tables
+        │
+        ▼
+Databricks SQL Dashboard
+```
 
-Each layer progressively improves data quality and business value.
-
----
-
-### Analytics
-
-Business-ready datasets are exposed through:
-
-- SQL Views
-- Gold Summary Tables
-- Manufacturing KPIs
-
----
-
-### Business Intelligence
-
-Interactive Power BI dashboards provide insights into:
-
-- Executive KPIs
-- Production Performance
-- Product Quality
-- Press Fitting Operations
-- End-to-End Traceability
+Each layer has a well-defined responsibility that contributes to building reliable, governed, and analytics-ready manufacturing data.
 
 ---
 
-## Target Audience
+# Core Components
 
-SMIP is intended for:
+The platform consists of several integrated components.
 
-- Data Engineers
-- Manufacturing Engineers
-- Industrial Digitalization Engineers
-- Business Intelligence Developers
-- Data Analysts
-- Students and Researchers
-- Industry 4.0 Professionals
+| Component | Purpose |
+|----------|---------|
+| Bronze Layer | Stores raw manufacturing events |
+| Silver Layer | Cleanses, validates, and standardizes manufacturing data |
+| Dimension Tables | Stores descriptive business entities |
+| Fact Tables | Captures measurable manufacturing activities |
+| Gold Layer | Calculates manufacturing KPIs |
+| SQL Dashboard | Visualizes operational performance |
+
+Together, these components provide a scalable architecture for manufacturing analytics.
 
 ---
 
-## Related Documentation
+# Technologies
 
-- System Architecture
-- Manufacturing Workflow
-- Databricks Lakehouse
-- Power BI Overview
+The project is implemented using modern cloud-native technologies.
+
+| Category | Technology |
+|----------|------------|
+| Cloud Platform | Databricks |
+| Storage | Delta Lake |
+| Governance | Unity Catalog |
+| Pipelines | Lakeflow Declarative Pipelines |
+| Programming | Python |
+| Query Language | SQL |
+| Analytics | Databricks SQL |
+| Data Modeling | Star Schema |
+| Version Control | Git & GitHub |
+
+---
+
+# Expected Outcomes
+
+The implementation of SMIP V2 enables:
+
+- Centralized manufacturing data management.
+- Improved data quality through layered transformations.
+- Standardized business models using dimensions and fact tables.
+- Manufacturing KPI calculation.
+- Executive reporting through interactive dashboards.
+- Scalable analytics suitable for future industrial use cases.
+
+---
+
+# Project Deliverables
+
+The completed project includes:
+
+- Databricks Lakehouse implementation.
+- Medallion Architecture.
+- Manufacturing Star Schema.
+- Dimension and Fact tables.
+- Gold KPI tables.
+- Manufacturing SQL Dashboard.
+- Technical documentation.
+- GitHub repository with reproducible project structure.
+
+---
+
+# Conclusion
+
+The Smart Manufacturing Intelligence Platform (SMIP) V2 demonstrates how manufacturing data can be transformed into actionable business intelligence using a modern Lakehouse architecture.
+
+By combining Data Engineering, dimensional modeling, and business intelligence, the project illustrates a complete analytics workflow from raw production events to executive decision support.
+
+The following chapters describe the business challenges that motivated the project before exploring the technical implementation in detail.
+
+---
+
+# Next Section
+
+**Business Problem**
+
+The next document explains the manufacturing challenges that motivated the development of SMIP V2 and describes the business context in which the platform operates.

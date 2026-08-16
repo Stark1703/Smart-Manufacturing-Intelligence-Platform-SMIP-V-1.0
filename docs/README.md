@@ -1,135 +1,167 @@
-# 📚 Documentation
+# Smart Manufacturing Intelligence Platform (SMIP) V2 - Documentation
 
-Welcome to the documentation for the **Smart Manufacturing Intelligence Platform (SMIP)**.
+## Overview
 
-This documentation provides a comprehensive description of the project's architecture, manufacturing simulation, data model, analytics, and development guidelines.
+Welcome to the technical documentation of the **Smart Manufacturing Intelligence Platform (SMIP) V2**, a cloud-native manufacturing analytics platform built on the **Databricks Lakehouse Platform**.
+
+This documentation explains the complete engineering journey of transforming raw manufacturing events into business intelligence using a modern Medallion Architecture. It covers the project from business requirements and system architecture to dimensional modeling, data engineering, KPI development, and dashboard visualization.
+
+The goal of this documentation is to provide a clear understanding of the design decisions, implementation details, and engineering practices used throughout the project.
+
+---
+
+# About the Project
+
+The Smart Manufacturing Intelligence Platform (SMIP) V2 demonstrates how modern Data Engineering techniques can be applied to manufacturing environments to create a scalable analytics platform.
+
+The project simulates an industrial manufacturing process and processes production events through a complete Lakehouse architecture implemented with:
+
+- Databricks
+- Delta Lake
+- Unity Catalog
+- Lakeflow Declarative Pipelines
+- Star Schema dimensional modeling
+- Databricks SQL Dashboards
+
+The result is an end-to-end manufacturing analytics solution that transforms raw production events into business-ready insights.
 
 ---
 
 # Documentation Structure
 
-```text
-docs/
-│
-├── architecture/
-├── data_model/
-├── analytics/
-├── user_guide/
-├── development/
-└── images/
+The documentation is organized into eight sections that follow the natural lifecycle of the project.
+
+| Section | Description |
+|---------|-------------|
+| **01 Overview** | Project background, objectives, scope and business context |
+| **02 Architecture** | System architecture, Lakehouse design, Medallion Architecture and technology stack |
+| **03 Data Model** | Manufacturing process, event model, Star Schema, dimensions and fact tables |
+| **04 Data Engineering** | Bronze, Silver, Dimensions, Facts, Gold layers and pipeline implementation |
+| **05 Business Intelligence** | Manufacturing KPIs, SQL dashboards and executive reporting |
+| **06 User Guide** | Environment setup, deployment and pipeline execution |
+| **07 Development** | Project evolution, engineering decisions, roadmap and lessons learned |
+| **08 Images** | Architecture diagrams, dashboard screenshots, lineage and design illustrations |
+
+---
+
+# Documentation Roadmap
+
+The documentation is designed to be read in sequence.
+
+```
+Business Problem
+        │
+        ▼
+System Architecture
+        │
+        ▼
+Data Model
+        │
+        ▼
+Lakehouse Engineering
+        │
+        ▼
+Business KPIs
+        │
+        ▼
+SQL Dashboard
+        │
+        ▼
+Project Evolution
 ```
 
----
-
-# 📐 Architecture
-
-System-level documentation describing the design of the platform.
-
-| Document | Description |
-|----------|-------------|
-| system_architecture.md | Overall system architecture |
-| factory_digital_twin.md | Factory Digital Twin model |
-| manufacturing_workflow.md | Manufacturing process flow |
-| medallion_architecture.md | Databricks Medallion Architecture |
-| project_structure.md | Repository architecture |
+Each section builds upon the previous one to explain both the technical implementation and the reasoning behind the design.
 
 ---
 
-# 🗄️ Data Model
+# Project Architecture
 
-Documentation describing all generated datasets.
+The Smart Manufacturing Intelligence Platform follows a layered Lakehouse architecture.
 
-| Document | Description |
-|----------|-------------|
-| master_data.md | Master data model |
-| transactional_data.md | Transactional datasets |
-| entity_relationships.md | Entity relationship model |
-| data_lineage.md | Manufacturing traceability |
-| dataset_dictionary.md | Complete data dictionary |
+```
+Manufacturing Events
+        │
+        ▼
+Bronze Layer
+(Raw Data)
+        │
+        ▼
+Silver Layer
+(Cleansed & Standardized Data)
+        │
+        ▼
+Dimension Tables
+        │
+        ▼
+Fact Tables
+        │
+        ▼
+Gold KPI Tables
+        │
+        ▼
+Databricks SQL Dashboard
+```
 
----
-
-# 📊 Analytics
-
-Analytics and reporting documentation.
-
-| Document | Description |
-|----------|-------------|
-| manufacturing_kpis.md | Manufacturing KPIs |
-| sql_examples.md | Example SQL queries |
-| powerbi_dashboard.md | Dashboard design |
-| databricks_lakehouse.md | Lakehouse implementation |
-
----
-
-# 👨‍💻 User Guide
-
-Documentation for installing and running the project.
-
-| Document | Description |
-|----------|-------------|
-| installation.md | Installation guide |
-| quick_start.md | Five-minute quick start |
-| execution_order.md | Script execution order |
-| troubleshooting.md | Common issues and fixes |
-| faq.md | Frequently asked questions |
+This architecture separates data ingestion, transformation, business modeling, and analytics into well-defined layers that improve maintainability, scalability, and governance.
 
 ---
 
-# 🛠️ Development
+# Technologies
 
-Documentation for contributors and future development.
+The project combines modern cloud data engineering technologies, including:
 
-| Document | Description |
-|----------|-------------|
-| project_structure.md | Repository layout |
-| coding_guidelines.md | Coding standards |
-| roadmap.md | Future enhancements |
-| changelog.md | Version history |
-| contributing.md | Contribution guidelines |
-
----
-
-# 📷 Images
-
-The `images/` directory contains all project diagrams and screenshots.
-
-Planned diagrams include:
-
-- System Architecture
-- Factory Digital Twin
-- Manufacturing Workflow
-- Medallion Architecture
-- Entity Relationship Diagram
-- Data Lineage
-- Dashboard Architecture
+| Category | Technology |
+|----------|------------|
+| Cloud Platform | Databricks |
+| Storage | Delta Lake |
+| Governance | Unity Catalog |
+| Data Pipelines | Lakeflow Declarative Pipelines |
+| Programming | Python |
+| Query Language | SQL |
+| Analytics | Databricks SQL |
+| Data Modeling | Star Schema |
+| Version Control | Git & GitHub |
 
 ---
 
-# Recommended Reading Order
+# Intended Audience
 
-If you are new to the project, follow this sequence:
+This documentation is intended for:
 
-1. System Architecture
-2. Project Structure
-3. Factory Digital Twin
-4. Manufacturing Workflow
-5. Master Data Model
-6. Transactional Data Model
-7. Data Lineage
-8. Databricks Lakehouse
-9. Manufacturing KPIs
+- Data Engineers
+- Analytics Engineers
+- Manufacturing Engineers
+- Solution Architects
+- Students learning Lakehouse architecture
+- Technical recruiters and hiring managers
 
 ---
 
-# Documentation Status
+# Repository
 
-| Section | Status |
-|----------|:------:|
-| Architecture | 🚧 In Progress |
-| Data Model | 🚧 In Progress |
-| User Guide | 🚧 In Progress |
-| Analytics | 🚧 In Progress |
-| Development | 🚧 In Progress |
+The documentation corresponds to the **`databricks-v2`** branch of the Smart Manufacturing Intelligence Platform repository.
 
-The documentation is continuously updated as new features are added to the platform.
+This branch focuses exclusively on the Databricks Lakehouse implementation. The local manufacturing event generation platform is documented separately in the **`v2.0-dev`** branch.
+
+---
+
+# Learning Objectives
+
+By reading this documentation, you will understand:
+
+- How manufacturing events are transformed into analytics-ready datasets
+- How the Medallion Architecture is implemented in Databricks
+- How a Star Schema supports manufacturing analytics
+- How Fact and Dimension tables are designed
+- How manufacturing KPIs are calculated
+- How Databricks SQL dashboards support operational decision-making
+
+---
+
+# Next Section
+
+Continue with:
+
+**01 Overview → README.md**
+
+This section introduces the manufacturing business context, project objectives, and the engineering goals that motivated the development of SMIP V2.
