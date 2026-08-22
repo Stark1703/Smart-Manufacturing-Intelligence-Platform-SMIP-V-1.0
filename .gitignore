@@ -50,3 +50,7 @@ data/transactional_data/*.csv
 # Power BI temporary
 
 *.tmp
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
