@@ -369,7 +369,7 @@ This project demonstrates practical implementation of:
 
 ## **Sumanth Vempalle**
 
-**Mechanical Engineer → Data Engineer**
+**Mechanical and Sustainable Induistrial Engineer → Data Engineer**
 
 ### Areas of Interest
 
