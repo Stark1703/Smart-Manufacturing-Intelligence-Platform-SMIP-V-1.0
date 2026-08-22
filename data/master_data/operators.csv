@@ -1,0 +1,73 @@
+operator_id,first_name,last_name,employee_number,shift,skill_level,primary_machine_type,years_of_experience,mes_authorized,active
+OP-0001,Thomas,Novak,EMP-10001,Morning,Senior,Circuit Breaker Assembly,4,True,True
+OP-0002,Daniel,Svoboda,EMP-10002,Morning,Trainee,Mechanical Test Bench,7,True,True
+OP-0003,Martin,Novak,EMP-10003,Morning,Trainee,Circuit Breaker Assembly,4,True,True
+OP-0004,Adam,Kral,EMP-10004,Morning,Junior,High Voltage Test Bench,11,True,True
+OP-0005,Eva,Kovac,EMP-10005,Morning,Expert,Mechanical Test Bench,5,True,True
+OP-0006,Adam,Horvat,EMP-10006,Morning,Expert,Dead Tank Assembly,5,True,True
+OP-0007,Daniel,Kovac,EMP-10007,Morning,Senior,Press Fitting Machine,2,True,True
+OP-0008,Laura,Svoboda,EMP-10008,Morning,Senior,Dead Tank Assembly,10,True,True
+OP-0009,Robert,Novak,EMP-10009,Morning,Expert,Mechanical Test Bench,2,True,True
+OP-0010,Laura,Svoboda,EMP-10010,Morning,Senior,High Voltage Test Bench,10,True,True
+OP-0011,Maria,Urban,EMP-10011,Morning,Junior,High Voltage Test Bench,2,True,True
+OP-0012,Martin,Kovac,EMP-10012,Morning,Senior,Press Fitting Machine,14,True,True
+OP-0013,David,Svoboda,EMP-10013,Morning,Expert,Dead Tank Assembly,8,True,True
+OP-0014,Maria,Horvat,EMP-10014,Morning,Senior,Dead Tank Assembly,4,True,True
+OP-0015,Robert,Svoboda,EMP-10015,Morning,Junior,Mechanical Test Bench,12,True,True
+OP-0016,David,Horvat,EMP-10016,Morning,Expert,GIS Bay Assembly,5,True,True
+OP-0017,David,Meyer,EMP-10017,Morning,Trainee,Circuit Breaker Assembly,14,True,True
+OP-0018,Martin,Meyer,EMP-10018,Morning,Expert,Dead Tank Assembly,2,True,True
+OP-0019,Jan,Urban,EMP-10019,Morning,Senior,Circuit Breaker Assembly,11,True,True
+OP-0020,Petra,Huber,EMP-10020,Morning,Expert,Circuit Breaker Assembly,5,True,True
+OP-0021,Daniel,Kovac,EMP-10021,Morning,Senior,High Voltage Test Bench,10,True,True
+OP-0022,Eva,Urban,EMP-10022,Morning,Expert,Dead Tank Assembly,4,True,True
+OP-0023,Daniel,Kral,EMP-10023,Morning,Expert,Press Fitting Machine,13,True,True
+OP-0024,Martin,Svoboda,EMP-10024,Morning,Junior,High Voltage Test Bench,3,True,True
+OP-0025,Eva,Urban,EMP-10025,Evening,Trainee,GIS Bay Assembly,7,True,True
+OP-0026,Julia,Kral,EMP-10026,Evening,Senior,Mechanical Test Bench,14,True,True
+OP-0027,Adam,Svoboda,EMP-10027,Evening,Senior,High Voltage Test Bench,6,True,True
+OP-0028,Thomas,Schmidt,EMP-10028,Evening,Expert,Circuit Breaker Assembly,8,True,True
+OP-0029,Adam,Schmidt,EMP-10029,Evening,Junior,Mechanical Test Bench,15,True,True
+OP-0030,Thomas,Schmidt,EMP-10030,Evening,Junior,Circuit Breaker Assembly,6,True,True
+OP-0031,Lucas,Kral,EMP-10031,Evening,Trainee,Mechanical Test Bench,6,True,True
+OP-0032,Petra,Novak,EMP-10032,Evening,Trainee,Dead Tank Assembly,15,True,True
+OP-0033,Michael,Kovac,EMP-10033,Evening,Trainee,Circuit Breaker Assembly,15,True,True
+OP-0034,Peter,Svoboda,EMP-10034,Evening,Expert,Press Fitting Machine,13,True,True
+OP-0035,Daniel,Horvat,EMP-10035,Evening,Expert,Mechanical Test Bench,3,True,True
+OP-0036,Robert,Kral,EMP-10036,Evening,Expert,Circuit Breaker Assembly,15,True,True
+OP-0037,Jan,Schmidt,EMP-10037,Evening,Expert,High Voltage Test Bench,11,True,True
+OP-0038,Maria,Novotny,EMP-10038,Evening,Expert,Press Fitting Machine,4,True,True
+OP-0039,David,Svoboda,EMP-10039,Evening,Senior,Press Fitting Machine,10,True,True
+OP-0040,David,Urban,EMP-10040,Evening,Junior,Press Fitting Machine,2,True,True
+OP-0041,Martin,Kovac,EMP-10041,Evening,Trainee,Press Fitting Machine,14,True,True
+OP-0042,Anna,Svoboda,EMP-10042,Evening,Junior,Dead Tank Assembly,11,True,True
+OP-0043,Petra,Kovac,EMP-10043,Evening,Junior,High Voltage Test Bench,15,True,True
+OP-0044,Petra,Kovac,EMP-10044,Evening,Expert,GIS Bay Assembly,4,True,True
+OP-0045,Thomas,Svoboda,EMP-10045,Evening,Expert,Dead Tank Assembly,7,True,True
+OP-0046,Eva,Novotny,EMP-10046,Evening,Trainee,High Voltage Test Bench,11,True,True
+OP-0047,Thomas,Novak,EMP-10047,Evening,Expert,High Voltage Test Bench,6,True,True
+OP-0048,Thomas,Kovac,EMP-10048,Evening,Junior,Circuit Breaker Assembly,9,True,True
+OP-0049,Julia,Horvat,EMP-10049,Night,Expert,Circuit Breaker Assembly,5,True,True
+OP-0050,Julia,Kovac,EMP-10050,Night,Trainee,GIS Bay Assembly,13,True,True
+OP-0051,Thomas,Novak,EMP-10051,Night,Trainee,Press Fitting Machine,15,True,True
+OP-0052,David,Horvat,EMP-10052,Night,Expert,GIS Bay Assembly,8,True,True
+OP-0053,Jan,Huber,EMP-10053,Night,Trainee,Circuit Breaker Assembly,7,True,True
+OP-0054,Adam,Huber,EMP-10054,Night,Senior,GIS Bay Assembly,5,True,True
+OP-0055,Eva,Kral,EMP-10055,Night,Expert,Circuit Breaker Assembly,4,True,True
+OP-0056,Michael,Kovac,EMP-10056,Night,Trainee,Mechanical Test Bench,12,True,True
+OP-0057,Martin,Meyer,EMP-10057,Night,Trainee,Press Fitting Machine,10,True,True
+OP-0058,Petra,Kral,EMP-10058,Night,Junior,Press Fitting Machine,9,True,True
+OP-0059,Peter,Horvat,EMP-10059,Night,Trainee,Mechanical Test Bench,2,True,True
+OP-0060,David,Huber,EMP-10060,Night,Trainee,Mechanical Test Bench,4,True,True
+OP-0061,Martin,Urban,EMP-10061,Night,Trainee,GIS Bay Assembly,11,True,True
+OP-0062,Anna,Schmidt,EMP-10062,Night,Junior,High Voltage Test Bench,12,True,True
+OP-0063,Anna,Kovac,EMP-10063,Night,Senior,GIS Bay Assembly,3,True,True
+OP-0064,Michael,Novotny,EMP-10064,Night,Senior,Press Fitting Machine,1,True,True
+OP-0065,Julia,Urban,EMP-10065,Night,Trainee,Press Fitting Machine,9,True,True
+OP-0066,Jan,Kral,EMP-10066,Night,Senior,Circuit Breaker Assembly,15,True,True
+OP-0067,Maria,Svoboda,EMP-10067,Night,Junior,Dead Tank Assembly,5,True,True
+OP-0068,Lucas,Novotny,EMP-10068,Night,Senior,Mechanical Test Bench,13,True,True
+OP-0069,Adam,Kral,EMP-10069,Night,Senior,High Voltage Test Bench,2,True,True
+OP-0070,Daniel,Schmidt,EMP-10070,Night,Trainee,Press Fitting Machine,12,True,True
+OP-0071,Daniel,Schmidt,EMP-10071,Night,Senior,Mechanical Test Bench,4,True,True
+OP-0072,Anna,Kovac,EMP-10072,Night,Senior,Mechanical Test Bench,8,True,True

@@ -1,0 +1,37 @@
+program_id,product_code,operation_code,test_type,test_name,target_value,minimum_value,maximum_value,unit,standard_duration_sec,active
+TP-0001,GIS-072-2500,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0002,GIS-072-2500,OP100,Dielectric,High Voltage Dielectric Test,140.0,137.2,142.8,kV,420,True
+TP-0003,GIS-072-2500,OP110,Pressure Leak,Pressure Leak Test,8.0,7.8,8.2,bar,360,True
+TP-0004,GIS-072-3150,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0005,GIS-072-3150,OP100,Dielectric,High Voltage Dielectric Test,140.0,137.2,142.8,kV,420,True
+TP-0006,GIS-072-3150,OP110,Pressure Leak,Pressure Leak Test,8.0,7.8,8.2,bar,360,True
+TP-0007,GIS-145-3150,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0008,GIS-145-3150,OP100,Dielectric,High Voltage Dielectric Test,275.0,269.5,280.5,kV,420,True
+TP-0009,GIS-145-3150,OP110,Pressure Leak,Pressure Leak Test,8.0,7.8,8.2,bar,360,True
+TP-0010,GIS-145-4000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0011,GIS-145-4000,OP100,Dielectric,High Voltage Dielectric Test,275.0,269.5,280.5,kV,420,True
+TP-0012,GIS-145-4000,OP110,Pressure Leak,Pressure Leak Test,8.0,7.8,8.2,bar,360,True
+TP-0013,GIS-170-4000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0014,GIS-170-4000,OP100,Dielectric,High Voltage Dielectric Test,325.0,318.5,331.5,kV,420,True
+TP-0015,GIS-170-4000,OP110,Pressure Leak,Pressure Leak Test,8.0,7.8,8.2,bar,360,True
+TP-0016,GIS-245-3150,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0017,GIS-245-3150,OP100,Dielectric,High Voltage Dielectric Test,460.0,450.8,469.2,kV,420,True
+TP-0018,GIS-245-3150,OP110,Pressure Leak,Pressure Leak Test,9.0,8.8,9.2,bar,360,True
+TP-0019,GIS-245-4000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0020,GIS-245-4000,OP100,Dielectric,High Voltage Dielectric Test,460.0,450.8,469.2,kV,420,True
+TP-0021,GIS-245-4000,OP110,Pressure Leak,Pressure Leak Test,9.0,8.8,9.2,bar,360,True
+TP-0022,GIS-300-4000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0023,GIS-300-4000,OP100,Dielectric,High Voltage Dielectric Test,510.0,499.8,520.2,kV,420,True
+TP-0024,GIS-300-4000,OP110,Pressure Leak,Pressure Leak Test,9.0,8.8,9.2,bar,360,True
+TP-0025,GIS-420-4000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0026,GIS-420-4000,OP100,Dielectric,High Voltage Dielectric Test,680.0,666.4,693.6,kV,420,True
+TP-0027,GIS-420-4000,OP110,Pressure Leak,Pressure Leak Test,10.0,9.8,10.2,bar,360,True
+TP-0028,GIS-420-5000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0029,GIS-420-5000,OP100,Dielectric,High Voltage Dielectric Test,680.0,666.4,693.6,kV,420,True
+TP-0030,GIS-420-5000,OP110,Pressure Leak,Pressure Leak Test,10.0,9.8,10.2,bar,360,True
+TP-0031,GIS-550-5000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0032,GIS-550-5000,OP100,Dielectric,High Voltage Dielectric Test,950.0,931.0,969.0,kV,420,True
+TP-0033,GIS-550-5000,OP110,Pressure Leak,Pressure Leak Test,10.0,9.8,10.2,bar,360,True
+TP-0034,GIS-800-5000,OP90,Mechanical,Mechanical Endurance Test,100.0,98.0,102.0,%,300,True
+TP-0035,GIS-800-5000,OP100,Dielectric,High Voltage Dielectric Test,1425.0,1396.5,1453.5,kV,420,True
+TP-0036,GIS-800-5000,OP110,Pressure Leak,Pressure Leak Test,11.0,10.8,11.2,bar,360,True

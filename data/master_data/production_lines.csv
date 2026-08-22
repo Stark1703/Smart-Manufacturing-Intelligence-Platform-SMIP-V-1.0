@@ -1,0 +1,7 @@
+line_id,hall_id,line_name,description,status
+LINE-01,HALL-01,Production Line 1,GIS Assembly Production Line 1,Active
+LINE-02,HALL-01,Production Line 2,GIS Assembly Production Line 2,Active
+LINE-03,HALL-01,Production Line 3,GIS Assembly Production Line 3,Active
+LINE-04,HALL-02,Production Line 4,GIS Assembly Production Line 4,Active
+LINE-05,HALL-02,Production Line 5,GIS Assembly Production Line 5,Active
+LINE-06,HALL-02,Production Line 6,GIS Assembly Production Line 6,Active

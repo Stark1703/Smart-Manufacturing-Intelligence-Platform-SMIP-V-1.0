@@ -1,0 +1,55 @@
+machine_id,line_id,station_id,station_sequence,machine_name,machine_type,manufacturer,status,commissioned_year
+PF-L1-S10,LINE-01,L1-S10,10,Press Fitting Machine,Press Fitting Machine,Kistler,Active,2024
+ASM-L1-S20,LINE-01,L1-S20,20,Circuit Breaker Assembly Station,Circuit Breaker Assembly,VoltGrid,Active,2024
+DTA-L1-S30,LINE-01,L1-S30,30,Dead Tank Assembly Station,Dead Tank Assembly,VoltGrid,Active,2024
+GBA-L1-S40,LINE-01,L1-S40,40,GIS Bay Assembly Station,GIS Bay Assembly,VoltGrid,Active,2024
+VIS-L1-S50,LINE-01,L1-S50,50,Visual Inspection Station,Visual Inspection,Keyence,Active,2024
+MOT-L1-S60,LINE-01,L1-S60,60,Mechanical Test Bench,Mechanical Test Bench,ABB,Active,2024
+HVT-L1-S70,LINE-01,L1-S70,70,High Voltage Test Bench,High Voltage Test Bench,Haefely,Active,2024
+PLT-L1-S80,LINE-01,L1-S80,80,Pressure Leak Test Bench,Pressure Leak Test Bench,ATEQ,Active,2024
+PKG-L1-S90,LINE-01,L1-S90,90,Packaging Station,Packaging Station,VoltGrid,Active,2024
+PF-L2-S10,LINE-02,L2-S10,10,Press Fitting Machine,Press Fitting Machine,Kistler,Active,2024
+ASM-L2-S20,LINE-02,L2-S20,20,Circuit Breaker Assembly Station,Circuit Breaker Assembly,VoltGrid,Active,2024
+DTA-L2-S30,LINE-02,L2-S30,30,Dead Tank Assembly Station,Dead Tank Assembly,VoltGrid,Active,2024
+GBA-L2-S40,LINE-02,L2-S40,40,GIS Bay Assembly Station,GIS Bay Assembly,VoltGrid,Active,2024
+VIS-L2-S50,LINE-02,L2-S50,50,Visual Inspection Station,Visual Inspection,Keyence,Active,2024
+MOT-L2-S60,LINE-02,L2-S60,60,Mechanical Test Bench,Mechanical Test Bench,ABB,Active,2024
+HVT-L2-S70,LINE-02,L2-S70,70,High Voltage Test Bench,High Voltage Test Bench,Haefely,Active,2024
+PLT-L2-S80,LINE-02,L2-S80,80,Pressure Leak Test Bench,Pressure Leak Test Bench,ATEQ,Active,2024
+PKG-L2-S90,LINE-02,L2-S90,90,Packaging Station,Packaging Station,VoltGrid,Active,2024
+PF-L3-S10,LINE-03,L3-S10,10,Press Fitting Machine,Press Fitting Machine,Kistler,Active,2024
+ASM-L3-S20,LINE-03,L3-S20,20,Circuit Breaker Assembly Station,Circuit Breaker Assembly,VoltGrid,Active,2024
+DTA-L3-S30,LINE-03,L3-S30,30,Dead Tank Assembly Station,Dead Tank Assembly,VoltGrid,Active,2024
+GBA-L3-S40,LINE-03,L3-S40,40,GIS Bay Assembly Station,GIS Bay Assembly,VoltGrid,Active,2024
+VIS-L3-S50,LINE-03,L3-S50,50,Visual Inspection Station,Visual Inspection,Keyence,Active,2024
+MOT-L3-S60,LINE-03,L3-S60,60,Mechanical Test Bench,Mechanical Test Bench,ABB,Active,2024
+HVT-L3-S70,LINE-03,L3-S70,70,High Voltage Test Bench,High Voltage Test Bench,Haefely,Active,2024
+PLT-L3-S80,LINE-03,L3-S80,80,Pressure Leak Test Bench,Pressure Leak Test Bench,ATEQ,Active,2024
+PKG-L3-S90,LINE-03,L3-S90,90,Packaging Station,Packaging Station,VoltGrid,Active,2024
+PF-L4-S10,LINE-04,L4-S10,10,Press Fitting Machine,Press Fitting Machine,Kistler,Active,2024
+ASM-L4-S20,LINE-04,L4-S20,20,Circuit Breaker Assembly Station,Circuit Breaker Assembly,VoltGrid,Active,2024
+DTA-L4-S30,LINE-04,L4-S30,30,Dead Tank Assembly Station,Dead Tank Assembly,VoltGrid,Active,2024
+GBA-L4-S40,LINE-04,L4-S40,40,GIS Bay Assembly Station,GIS Bay Assembly,VoltGrid,Active,2024
+VIS-L4-S50,LINE-04,L4-S50,50,Visual Inspection Station,Visual Inspection,Keyence,Active,2024
+MOT-L4-S60,LINE-04,L4-S60,60,Mechanical Test Bench,Mechanical Test Bench,ABB,Active,2024
+HVT-L4-S70,LINE-04,L4-S70,70,High Voltage Test Bench,High Voltage Test Bench,Haefely,Active,2024
+PLT-L4-S80,LINE-04,L4-S80,80,Pressure Leak Test Bench,Pressure Leak Test Bench,ATEQ,Active,2024
+PKG-L4-S90,LINE-04,L4-S90,90,Packaging Station,Packaging Station,VoltGrid,Active,2024
+PF-L5-S10,LINE-05,L5-S10,10,Press Fitting Machine,Press Fitting Machine,Kistler,Active,2024
+ASM-L5-S20,LINE-05,L5-S20,20,Circuit Breaker Assembly Station,Circuit Breaker Assembly,VoltGrid,Active,2024
+DTA-L5-S30,LINE-05,L5-S30,30,Dead Tank Assembly Station,Dead Tank Assembly,VoltGrid,Active,2024
+GBA-L5-S40,LINE-05,L5-S40,40,GIS Bay Assembly Station,GIS Bay Assembly,VoltGrid,Active,2024
+VIS-L5-S50,LINE-05,L5-S50,50,Visual Inspection Station,Visual Inspection,Keyence,Active,2024
+MOT-L5-S60,LINE-05,L5-S60,60,Mechanical Test Bench,Mechanical Test Bench,ABB,Active,2024
+HVT-L5-S70,LINE-05,L5-S70,70,High Voltage Test Bench,High Voltage Test Bench,Haefely,Active,2024
+PLT-L5-S80,LINE-05,L5-S80,80,Pressure Leak Test Bench,Pressure Leak Test Bench,ATEQ,Active,2024
+PKG-L5-S90,LINE-05,L5-S90,90,Packaging Station,Packaging Station,VoltGrid,Active,2024
+PF-L6-S10,LINE-06,L6-S10,10,Press Fitting Machine,Press Fitting Machine,Kistler,Active,2024
+ASM-L6-S20,LINE-06,L6-S20,20,Circuit Breaker Assembly Station,Circuit Breaker Assembly,VoltGrid,Active,2024
+DTA-L6-S30,LINE-06,L6-S30,30,Dead Tank Assembly Station,Dead Tank Assembly,VoltGrid,Active,2024
+GBA-L6-S40,LINE-06,L6-S40,40,GIS Bay Assembly Station,GIS Bay Assembly,VoltGrid,Active,2024
+VIS-L6-S50,LINE-06,L6-S50,50,Visual Inspection Station,Visual Inspection,Keyence,Active,2024
+MOT-L6-S60,LINE-06,L6-S60,60,Mechanical Test Bench,Mechanical Test Bench,ABB,Active,2024
+HVT-L6-S70,LINE-06,L6-S70,70,High Voltage Test Bench,High Voltage Test Bench,Haefely,Active,2024
+PLT-L6-S80,LINE-06,L6-S80,80,Pressure Leak Test Bench,Pressure Leak Test Bench,ATEQ,Active,2024
+PKG-L6-S90,LINE-06,L6-S90,90,Packaging Station,Packaging Station,VoltGrid,Active,2024

@@ -1,0 +1,55 @@
+station_id,line_id,station_code,station_type,sequence
+L1-S10,LINE-01,S10,Press Fitting,10
+L1-S20,LINE-01,S20,Circuit Breaker Assembly,20
+L1-S30,LINE-01,S30,Dead Tank Assembly,30
+L1-S40,LINE-01,S40,GIS Bay Assembly,40
+L1-S50,LINE-01,S50,Visual Inspection,50
+L1-S60,LINE-01,S60,Mechanical Test,60
+L1-S70,LINE-01,S70,HV Test,70
+L1-S80,LINE-01,S80,Pressure Test,80
+L1-S90,LINE-01,S90,Packaging,90
+L2-S10,LINE-02,S10,Press Fitting,10
+L2-S20,LINE-02,S20,Circuit Breaker Assembly,20
+L2-S30,LINE-02,S30,Dead Tank Assembly,30
+L2-S40,LINE-02,S40,GIS Bay Assembly,40
+L2-S50,LINE-02,S50,Visual Inspection,50
+L2-S60,LINE-02,S60,Mechanical Test,60
+L2-S70,LINE-02,S70,HV Test,70
+L2-S80,LINE-02,S80,Pressure Test,80
+L2-S90,LINE-02,S90,Packaging,90
+L3-S10,LINE-03,S10,Press Fitting,10
+L3-S20,LINE-03,S20,Circuit Breaker Assembly,20
+L3-S30,LINE-03,S30,Dead Tank Assembly,30
+L3-S40,LINE-03,S40,GIS Bay Assembly,40
+L3-S50,LINE-03,S50,Visual Inspection,50
+L3-S60,LINE-03,S60,Mechanical Test,60
+L3-S70,LINE-03,S70,HV Test,70
+L3-S80,LINE-03,S80,Pressure Test,80
+L3-S90,LINE-03,S90,Packaging,90
+L4-S10,LINE-04,S10,Press Fitting,10
+L4-S20,LINE-04,S20,Circuit Breaker Assembly,20
+L4-S30,LINE-04,S30,Dead Tank Assembly,30
+L4-S40,LINE-04,S40,GIS Bay Assembly,40
+L4-S50,LINE-04,S50,Visual Inspection,50
+L4-S60,LINE-04,S60,Mechanical Test,60
+L4-S70,LINE-04,S70,HV Test,70
+L4-S80,LINE-04,S80,Pressure Test,80
+L4-S90,LINE-04,S90,Packaging,90
+L5-S10,LINE-05,S10,Press Fitting,10
+L5-S20,LINE-05,S20,Circuit Breaker Assembly,20
+L5-S30,LINE-05,S30,Dead Tank Assembly,30
+L5-S40,LINE-05,S40,GIS Bay Assembly,40
+L5-S50,LINE-05,S50,Visual Inspection,50
+L5-S60,LINE-05,S60,Mechanical Test,60
+L5-S70,LINE-05,S70,HV Test,70
+L5-S80,LINE-05,S80,Pressure Test,80
+L5-S90,LINE-05,S90,Packaging,90
+L6-S10,LINE-06,S10,Press Fitting,10
+L6-S20,LINE-06,S20,Circuit Breaker Assembly,20
+L6-S30,LINE-06,S30,Dead Tank Assembly,30
+L6-S40,LINE-06,S40,GIS Bay Assembly,40
+L6-S50,LINE-06,S50,Visual Inspection,50
+L6-S60,LINE-06,S60,Mechanical Test,60
+L6-S70,LINE-06,S70,HV Test,70
+L6-S80,LINE-06,S80,Pressure Test,80
+L6-S90,LINE-06,S90,Packaging,90

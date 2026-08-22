@@ -1,0 +1,13 @@
+operation_id,operation_number,operation_code,operation_name,department,station_type,machine_type,requires_operator,requires_tool,quality_checkpoint,standard_cycle_time_sec,predecessor_operation,is_mandatory
+OP-001,10,OP10,Contact Press Fit,Press Shop,Press Fitting,Press Fitting Machine,True,True,True,15,,True
+OP-002,20,OP20,Mechanism Press Fit,Press Shop,Press Fitting,Press Fitting Machine,True,True,True,20,,True
+OP-003,30,OP30,Insulator Press Fit,Press Shop,Press Fitting,Press Fitting Machine,True,True,True,30,,True
+OP-004,40,OP40,Final Housing Press Fit,Press Shop,Press Fitting,Press Fitting Machine,True,True,True,40,,True
+OP-005,50,OP50,Circuit Breaker Assembly,Assembly,Circuit Breaker Assembly,Circuit Breaker Assembly,True,False,False,120,,True
+OP-006,60,OP60,Dead Tank Assembly,Assembly,Dead Tank Assembly,Dead Tank Assembly,True,False,False,180,,True
+OP-007,70,OP70,GIS Bay Assembly,Assembly,GIS Bay Assembly,GIS Bay Assembly,True,False,True,240,,True
+OP-008,80,OP80,Visual Inspection,Quality,Visual Inspection,Visual Inspection,True,False,True,45,,True
+OP-009,90,OP90,Mechanical Test,Testing,Mechanical Test,Mechanical Test Bench,True,False,True,300,,True
+OP-010,100,OP100,High Voltage Test,Testing,HV Test,High Voltage Test Bench,True,False,True,420,,True
+OP-011,110,OP110,Pressure Leak Test,Testing,Pressure Test,Pressure Leak Test Bench,True,False,True,360,,True
+OP-012,120,OP120,Packaging,Logistics,Packaging,Packaging Station,True,False,False,180,,True

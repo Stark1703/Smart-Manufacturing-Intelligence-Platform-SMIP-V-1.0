@@ -1,0 +1,55 @@
+tool_id,machine_id,tool_name,tool_type,machine_type,calibration_interval_days,last_calibration,next_calibration,status
+TL-PF-001,PF-L1-S10,Hydraulic Press Tool,Press Tool,Press Fitting Machine,180,,,Active
+TL-ASM-002,ASM-L1-S20,Assembly Fixture,Assembly Fixture,Circuit Breaker Assembly,365,,,Active
+TL-DTA-003,DTA-L1-S30,Dead Tank Fixture,Assembly Fixture,Dead Tank Assembly,365,,,Active
+TL-GBA-004,GBA-L1-S40,GIS Assembly Fixture,Assembly Fixture,GIS Bay Assembly,365,,,Active
+TL-VIS-005,VIS-L1-S50,Inspection Gauge,Inspection Gauge,Visual Inspection,90,,,Active
+TL-MOT-006,MOT-L1-S60,Mechanical Test Fixture,Inspection Gauge,Mechanical Test Bench,180,,,Active
+TL-HVT-007,HVT-L1-S70,HV Test Probe,Inspection Gauge,High Voltage Test Bench,180,,,Active
+TL-PLT-008,PLT-L1-S80,Pressure Test Adapter,Inspection Gauge,Pressure Leak Test Bench,180,,,Active
+TL-PKG-009,PKG-L1-S90,Packaging Fixture,Assembly Fixture,Packaging Station,365,,,Active
+TL-PF-010,PF-L2-S10,Hydraulic Press Tool,Press Tool,Press Fitting Machine,180,,,Active
+TL-ASM-011,ASM-L2-S20,Assembly Fixture,Assembly Fixture,Circuit Breaker Assembly,365,,,Active
+TL-DTA-012,DTA-L2-S30,Dead Tank Fixture,Assembly Fixture,Dead Tank Assembly,365,,,Active
+TL-GBA-013,GBA-L2-S40,GIS Assembly Fixture,Assembly Fixture,GIS Bay Assembly,365,,,Active
+TL-VIS-014,VIS-L2-S50,Inspection Gauge,Inspection Gauge,Visual Inspection,90,,,Active
+TL-MOT-015,MOT-L2-S60,Mechanical Test Fixture,Inspection Gauge,Mechanical Test Bench,180,,,Active
+TL-HVT-016,HVT-L2-S70,HV Test Probe,Inspection Gauge,High Voltage Test Bench,180,,,Active
+TL-PLT-017,PLT-L2-S80,Pressure Test Adapter,Inspection Gauge,Pressure Leak Test Bench,180,,,Active
+TL-PKG-018,PKG-L2-S90,Packaging Fixture,Assembly Fixture,Packaging Station,365,,,Active
+TL-PF-019,PF-L3-S10,Hydraulic Press Tool,Press Tool,Press Fitting Machine,180,,,Active
+TL-ASM-020,ASM-L3-S20,Assembly Fixture,Assembly Fixture,Circuit Breaker Assembly,365,,,Active
+TL-DTA-021,DTA-L3-S30,Dead Tank Fixture,Assembly Fixture,Dead Tank Assembly,365,,,Active
+TL-GBA-022,GBA-L3-S40,GIS Assembly Fixture,Assembly Fixture,GIS Bay Assembly,365,,,Active
+TL-VIS-023,VIS-L3-S50,Inspection Gauge,Inspection Gauge,Visual Inspection,90,,,Active
+TL-MOT-024,MOT-L3-S60,Mechanical Test Fixture,Inspection Gauge,Mechanical Test Bench,180,,,Active
+TL-HVT-025,HVT-L3-S70,HV Test Probe,Inspection Gauge,High Voltage Test Bench,180,,,Active
+TL-PLT-026,PLT-L3-S80,Pressure Test Adapter,Inspection Gauge,Pressure Leak Test Bench,180,,,Active
+TL-PKG-027,PKG-L3-S90,Packaging Fixture,Assembly Fixture,Packaging Station,365,,,Active
+TL-PF-028,PF-L4-S10,Hydraulic Press Tool,Press Tool,Press Fitting Machine,180,,,Active
+TL-ASM-029,ASM-L4-S20,Assembly Fixture,Assembly Fixture,Circuit Breaker Assembly,365,,,Active
+TL-DTA-030,DTA-L4-S30,Dead Tank Fixture,Assembly Fixture,Dead Tank Assembly,365,,,Active
+TL-GBA-031,GBA-L4-S40,GIS Assembly Fixture,Assembly Fixture,GIS Bay Assembly,365,,,Active
+TL-VIS-032,VIS-L4-S50,Inspection Gauge,Inspection Gauge,Visual Inspection,90,,,Active
+TL-MOT-033,MOT-L4-S60,Mechanical Test Fixture,Inspection Gauge,Mechanical Test Bench,180,,,Active
+TL-HVT-034,HVT-L4-S70,HV Test Probe,Inspection Gauge,High Voltage Test Bench,180,,,Active
+TL-PLT-035,PLT-L4-S80,Pressure Test Adapter,Inspection Gauge,Pressure Leak Test Bench,180,,,Active
+TL-PKG-036,PKG-L4-S90,Packaging Fixture,Assembly Fixture,Packaging Station,365,,,Active
+TL-PF-037,PF-L5-S10,Hydraulic Press Tool,Press Tool,Press Fitting Machine,180,,,Active
+TL-ASM-038,ASM-L5-S20,Assembly Fixture,Assembly Fixture,Circuit Breaker Assembly,365,,,Active
+TL-DTA-039,DTA-L5-S30,Dead Tank Fixture,Assembly Fixture,Dead Tank Assembly,365,,,Active
+TL-GBA-040,GBA-L5-S40,GIS Assembly Fixture,Assembly Fixture,GIS Bay Assembly,365,,,Active
+TL-VIS-041,VIS-L5-S50,Inspection Gauge,Inspection Gauge,Visual Inspection,90,,,Active
+TL-MOT-042,MOT-L5-S60,Mechanical Test Fixture,Inspection Gauge,Mechanical Test Bench,180,,,Active
+TL-HVT-043,HVT-L5-S70,HV Test Probe,Inspection Gauge,High Voltage Test Bench,180,,,Active
+TL-PLT-044,PLT-L5-S80,Pressure Test Adapter,Inspection Gauge,Pressure Leak Test Bench,180,,,Active
+TL-PKG-045,PKG-L5-S90,Packaging Fixture,Assembly Fixture,Packaging Station,365,,,Active
+TL-PF-046,PF-L6-S10,Hydraulic Press Tool,Press Tool,Press Fitting Machine,180,,,Active
+TL-ASM-047,ASM-L6-S20,Assembly Fixture,Assembly Fixture,Circuit Breaker Assembly,365,,,Active
+TL-DTA-048,DTA-L6-S30,Dead Tank Fixture,Assembly Fixture,Dead Tank Assembly,365,,,Active
+TL-GBA-049,GBA-L6-S40,GIS Assembly Fixture,Assembly Fixture,GIS Bay Assembly,365,,,Active
+TL-VIS-050,VIS-L6-S50,Inspection Gauge,Inspection Gauge,Visual Inspection,90,,,Active
+TL-MOT-051,MOT-L6-S60,Mechanical Test Fixture,Inspection Gauge,Mechanical Test Bench,180,,,Active
+TL-HVT-052,HVT-L6-S70,HV Test Probe,Inspection Gauge,High Voltage Test Bench,180,,,Active
+TL-PLT-053,PLT-L6-S80,Pressure Test Adapter,Inspection Gauge,Pressure Leak Test Bench,180,,,Active
+TL-PKG-054,PKG-L6-S90,Packaging Fixture,Assembly Fixture,Packaging Station,365,,,Active
